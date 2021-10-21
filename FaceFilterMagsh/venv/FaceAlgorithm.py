@@ -212,7 +212,7 @@ def main():
     test_10 = read_image("../Resources/test_10.png")
     test_11 = read_image("../Resources/test_11.png")
     test_12 = read_image("../Resources/test_12.png")
-    averages_grid, img = face_detection(test_3)
+    averages_grid, img = face_detection(test_6)
     highest, lowest, left, right = find_extreme_case_points(averages_grid)
     #mid_point = get_mid_point(averages_grid)
     left_top_point, right_top_point, left_bottom_point, right_bottom_point = get_rectangle_coordinates(highest, lowest, left, right, averages_grid)
