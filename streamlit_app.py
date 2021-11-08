@@ -111,9 +111,11 @@ def main():
 			st.image(blur_img)
            
 		elif enhance_type == 'Original':
-			st.image(our_image,width=300)
+			#st.image(our_image,width=300)
+			st.image(our_image)
 		else:
-			st.image(our_image,width=300)
+			#st.image(our_image,width=300)
+			st.image(our_image)
 
 
 
