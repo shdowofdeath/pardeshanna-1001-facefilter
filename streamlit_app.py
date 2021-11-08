@@ -72,12 +72,12 @@ def main():
 
 	activities = ["Detection","About"]
 	choice = st.sidebar.selectbox("Select Activty",activities)
-
+	our_image = ""
 	if choice == 'Detection':
 		st.subheader("Face Detection")
 
 		image_file = st.file_uploader("Upload Image",type=['jpg','png','jpeg'])
-
+		
 		if image_file is not None:
 			our_image = Image.open(image_file)
 			st.text("Original Image")
