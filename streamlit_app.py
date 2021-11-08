@@ -72,7 +72,6 @@ def main():
 
 	activities = ["Detection","About"]
 	choice = st.sidebar.selectbox("Select Activty",activities)
-	our_image = ""
 	if choice == 'Detection':
 		st.subheader("Face Detection")
 
@@ -115,7 +114,8 @@ def main():
 			st.image(our_image)
 		else:
 			#st.image(our_image,width=300)
-			st.image(our_image)
+			# st.image(our_image)
+			pass
 
 
 
