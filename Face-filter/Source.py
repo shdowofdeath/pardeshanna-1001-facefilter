@@ -28,14 +28,23 @@ class Image:
     def get_img(self):
         return self.arr
 
+    def integral_img(self):
+        for i in range(ROWS):
+            for j in range(COLS):
+                z = self.arr[i - 1][j - 1] if (i > 0 and j > 0) else 0
+                x = self.arr[i][j - 1] if j > 0 else 0
+                y = self.arr[i - 1][j] if i > 0 else 0
+                self.arr[i][j] = self.arr[i][j] + x + y - z
+
 
 
 def main():
-    img = Image("./Resources/test.png")
+    img = Image("./Resources/test4.png")
     img.greyscale()
-    img.img_to_array()
     img.resize(ROWS, COLS)
-    print(img)
-
+    img.img_to_array()
+    img.integral_img()
+    cv2.imshow("After: ", img.data)
+    cv2.waitKey(0)
 if __name__ == '__main__':
     main()
