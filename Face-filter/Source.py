@@ -1,7 +1,6 @@
 from Image import *
 
 
-
 def main():
     img = Image("Resources/test_1.png")
     img.greyscale()
