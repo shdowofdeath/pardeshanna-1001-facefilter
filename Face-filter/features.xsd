@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Created with Liquid Technologies Online Tools 1.0 (https://www.liquid-technologies.com) -->
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="A_gest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="size" type="xs:string" />
+        <xs:element name="stages">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="_">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="trees">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element maxOccurs="unbounded" name="_">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="_">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="feature">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="rects">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element maxOccurs="unbounded" name="_" type="xs:string" />
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="tilted" type="xs:unsignedByte" />
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:element name="threshold" type="xs:double" />
+                                      <xs:element name="left_val" type="xs:decimal" />
+                                      <xs:element name="right_val" type="xs:decimal" />
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="stage_threshold" type="xs:decimal" />
+                    <xs:element name="parent" type="xs:byte" />
+                    <xs:element name="next" type="xs:byte" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="type_id" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
