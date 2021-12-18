@@ -1,6 +1,4 @@
-from const_libraries import *
-
-class Feature:
+class Rect:
     def __init__(self, x, y, width, height, weight):
         self.x = x
         self.y = y

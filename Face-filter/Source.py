@@ -1,8 +1,8 @@
-from Image import *
+from Classes.Image import *
 
 
 def main():
-    img = Image("Resources/test_1.png")
+    img = Image("FaceExamples/test_1.png")
     img.greyscale()
     img.resize(ROWS, COLS)
     img.img_to_array()

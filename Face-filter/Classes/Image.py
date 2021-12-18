@@ -1,4 +1,4 @@
-from const_libraries import *
+from Constants.const_libraries import *
 
 class Image:
     def __init__(self, path):
