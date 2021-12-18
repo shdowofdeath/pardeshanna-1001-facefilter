@@ -1,4 +1,5 @@
 import xmlschema
+
 data_schema = xmlschema.XMLSchema('features.xsd')
 data = data_schema.to_dict('xmlFile')
 stages = data['stages']['_']
@@ -23,12 +24,12 @@ for stage in stages:
         rects = feature['rects']
         rects_list = rects['_']
         tilted = feature['tilted']
+        print("Tilted: ", tilted)
         for mini in rects_list:
             print("Rect#", rects_counter, mini)
             rects_counter += 1
         rects_counter = 0
     feature_counter = 0
     stages_counter += 1
-
 
 
