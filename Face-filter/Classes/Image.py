@@ -33,9 +33,14 @@ class Image:
         return self.arr
 
     def integral_img(self):
+        #goes through the rows
         for i in range(ROWS):
+            #goes through the columns
             for j in range(COLS):
+                #if row and column bigger than 0 (can use previous diagonal), save previous diagonal
                 z = self.arr[i - 1][j - 1] if (i > 0 and j > 0) else 0
+                #save previous column
                 x = self.arr[i][j - 1] if j > 0 else 0
+                #save previous row
                 y = self.arr[i - 1][j] if i > 0 else 0
                 self.arr[i][j] = self.arr[i][j] + x + y - z
