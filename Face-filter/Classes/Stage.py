@@ -1,4 +1,8 @@
-#from Classes.Tree import *
+"""
+This is a class of a stage.
+
+Contains the stage threshold and the list of trees in the stage
+"""
 
 class Stage:
     def __init__(self, count, threshold):
