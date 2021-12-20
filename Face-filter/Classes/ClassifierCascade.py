@@ -12,4 +12,5 @@ class ClassifierCascade:
         self.stages = stages
 
     def detect_face(self, image):
+        #this function should detect the face
         pass

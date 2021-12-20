@@ -1,21 +1,32 @@
 from Constants.const_libraries import *
 
+"""
+This is the Image class.
+
+Contains the basic image function necessary for Image manipulation
+
+Contains the Integral image feature which optimizes the algorithim
+"""
+
 class Image:
     def __init__(self, path):
-        self.data = cv2.imread(path)
+        self.data = cv2.imread(path)#sets the image data from the path
         self.size = self.data.shape
         self.arr = [[]]
 
     def img_to_array(self):
+        #this functions converts the image to a numpy array
         self.arr = asarray(self.data)
         self.arr = self.arr.astype('float32')
         self.arr /= 255.0
 
     def resize(self, width, height):
+        #this function resizes the image
         dim = (width, height)
         self.data = cv2.resize(self.data, dim, interpolation=cv2.INTER_AREA)
 
     def greyscale(self):
+        #this function converts the image to greyscale
         self.data = cv2.cvtColor(self.data, cv2.COLOR_BGR2GRAY)
 
     def get_img(self):
