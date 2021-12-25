@@ -15,3 +15,6 @@ class TreeNode:
 
     def add_feature(self, feature):
         self.feature = feature
+
+    def compares_threshold(self):
+        pass

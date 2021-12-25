@@ -11,3 +11,8 @@ class Rect:
         self.width = width
         self.height = height
         self.weight = weight
+
+    def calc_rect_value(self, mini_grid):
+        #use integral image to calc the value
+        #returns the value of the rect
+        pass

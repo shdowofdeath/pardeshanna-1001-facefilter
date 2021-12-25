@@ -13,3 +13,7 @@ class Stage:
     def add_tree(self, tree):
         self.trees.append(tree)
 
+    def run_features(self, mini_grid):
+        #runs all the features in the stage
+        #returns if the stage run was successful
+        pass

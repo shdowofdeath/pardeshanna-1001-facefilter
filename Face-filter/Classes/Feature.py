@@ -13,3 +13,6 @@ class Feature:
 
     def add_rect(self, rect):
         self.rects.append(rect)
+
+    def calc_rects_diff(self):
+        pass
