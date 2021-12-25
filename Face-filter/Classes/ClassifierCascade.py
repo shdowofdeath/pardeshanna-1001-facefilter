@@ -10,8 +10,14 @@ class ClassifierCascade:
     def __init__(self, stages):
         #should it get the stages as an argument or should it extract it here?
         self.stages = stages
+        self.mini_grid = [[]]
 
     def detect_face(self, image):
+        start_row =0
+        end_row = 24
+        start_col = 0
+        end_col = 24
+        self.mini_grid = image[start_row:end_row, start_col:end_col]
         #this function should detect the face
         #mini_grid = 0,0
         #for rowS_image

@@ -7,6 +7,7 @@ from Classes.TreeNode import *
 from Classes.Tree import *
 from Classes.Feature import *
 from Classes.Rect import *
+from Classes.ClassifierCascade import *
 import xmlschema
 
 
