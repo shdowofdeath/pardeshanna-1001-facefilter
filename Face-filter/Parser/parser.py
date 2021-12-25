@@ -1,10 +1,17 @@
-from Constants.const_libraries import *
+from Classes.Stage import *
+from Classes.TreeNode import *
+from Classes.Tree import *
+from Classes.Feature import *
+from Classes.Rect import *
+import xmlschema
 
 """
 This function extracts the information from the XML into the classes
 """
+
+
 def load_stages():
-    data_schema = xmlschema.XMLSchema('xml/frontal_face.xsd')
+    data_schema = xmlschema.XMLSchema('./xml/frontal_face.xsd')
     data = data_schema.to_dict('xml/frontal_face')
     stages = data['haarcascade_frontalface_alt2']['stages']['_']
 
@@ -78,5 +85,3 @@ def load_stages():
         stage_list.append(_stage)
     return stage_list
 
-stages = load_stages()
-print(stages)

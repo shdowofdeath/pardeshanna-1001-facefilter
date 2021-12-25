@@ -17,7 +17,7 @@ class ClassifierCascade:
         end_row = 24
         start_col = 0
         end_col = 24
-        self.mini_grid = image[start_row:end_row, start_col:end_col]
+        self.mini_grid = image.arr[start_row:end_row, start_col:end_col]
         #this function should detect the face
         #mini_grid = 0,0
         #for rowS_image

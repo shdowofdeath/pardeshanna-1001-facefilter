@@ -1,4 +1,8 @@
-from Constants.const_libraries import *
+import cv2
+import numpy as np
+from numpy import asarray
+ROWS = 75
+COLS = 75
 
 """
 This is the Image class.
