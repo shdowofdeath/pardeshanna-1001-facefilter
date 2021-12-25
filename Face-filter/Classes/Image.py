@@ -20,6 +20,13 @@ class Image:
         self.arr = self.arr.astype('float32')
         self.arr /= 255.0
 
+    def invert_img_array(self):
+        for row in range(ROWS):
+             for col in range(COLS):
+                invert_pixel = 1 - self.arr[row][col]
+                self.arr[row][col] = invert_pixel
+
+
     def resize(self, width, height):
         #this function resizes the image
         dim = (width, height)
