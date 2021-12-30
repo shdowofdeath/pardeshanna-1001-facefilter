@@ -17,4 +17,7 @@ class TreeNode:
         self.feature = feature
 
     def compares_threshold(self):
-        pass
+        if self.feature.calc_rects_diff() == self.threshold:
+            return True
+        else:
+            return False
