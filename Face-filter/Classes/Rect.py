@@ -16,8 +16,8 @@ class Rect:
         #use integral image to calc the value
         #returns the value of the rect
 
-        w = mini_grid[self.x - 1][self.y - 1] if (self.x > 0 and self.y>0) else 0
+        w = mini_grid[self.x - 1][self.y - 1] if (self.x > 0 and self.y > 0) else 0
         x = mini_grid[self.x][self.y - 1] if (self.y > 0) else 0
         y = mini_grid[self.x - 1][self.y] if (self.x > 0) else 0
-        z = mini_grid[self.x + self.width - 1][self.y +self.height - 1]
+        z = mini_grid[self.x + self.width - 1][self.y + self.height - 1]
         return z - x - y + w
