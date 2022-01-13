@@ -21,7 +21,18 @@ class Feature:
         #get value of rect2
         #calculate the difference between them
         #return if the difference is closer to 1 (1/threshold?)
-        pass
+
+        rect1_value = rect1.calc_rect_value(mini_grid)
+        rect2_value = rect2.calc_rect_value(mini_grid)
+
+        if rect1.weight < 0: #rect 1 is the black
+            diff = rect1_value - rect2_value
+        else: #rect 2 is the black
+            diff = rect2_value - rect1_value
+
+        if diff >= self.threshold:
+            return True
+        return False
 
     def is_feature_existent(self, mini_grid):
         #check the number of rects there are:
@@ -45,8 +56,8 @@ class Feature:
                     elif((self.rects[1].y - self.rects[0].y) * 2 == (self.rects[0].height - self.rects[1].height)):
                         #3 rects
                         middle = self.rects[1]
-                        above = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width, self.rects[0].height / 3, 0)
-                        below = Rect(self.rects[0].x, self.rects[1].y + (self.rects[0].height / 3), self.rects[0].width, self.rects[0].height / 3, 0)
+                        above = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width, self.rects[0].height / 3, self.rects[0].weight)
+                        below = Rect(self.rects[0].x, self.rects[1].y + (self.rects[0].height / 3), self.rects[0].width, self.rects[0].height / 3, self.rects[0].weight)
                         if(self.is_diff(mini_grid,above, middle) and self.is_diff(mini_grid,below, middle)):
                             #success
                             pass
@@ -66,9 +77,9 @@ class Feature:
                     elif ((self.rects[1].x - self.rects[0].x) * 2 == (self.rects[0].width - self.rects[1].width)):
                         # 3 rects
                         middle = self.rects[1]
-                        left = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width / 3, self.rects[0].height, 0)
+                        left = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width / 3, self.rects[0].height, self.rects[0].weight)
                         right = Rect(self.rects[1].x + (self.rects[0].width / 3), self.rects[0].y, self.rects[0].width / 3,
-                                     self.rects[0].height, 0)
+                                     self.rects[0].height, self.rects[0].weight)
                         if (self.is_diff(mini_grid, left, middle) and self.is_diff(mini_grid, right, middle)):
                             # success
                             pass
@@ -81,8 +92,8 @@ class Feature:
             elif self.rects.count() == 3:#there are 4 rects
                 if(self.rects[0].x == self.rects[1].x and self.rects[0].y == self.rects[1].y): #same starting point
                     top_left = self.rects[1]
-                    top_right = Rect(self.rects[0].x + (self.rects[0].width / 2), self.rects[0].y, self.rects[0].width / 2, self.rects[0].height / 2, 0)
-                    bottom_left = Rect(self.rects[0].x, self.rects[0].y + (self.rects[0].height / 2), self.rects[0].width / 2, self.rects[0].height / 2, 0)
+                    top_right = Rect(self.rects[0].x + (self.rects[0].width / 2), self.rects[0].y, self.rects[0].width / 2, self.rects[0].height / 2, self.rects[0].weight)
+                    bottom_left = Rect(self.rects[0].x, self.rects[0].y + (self.rects[0].height / 2), self.rects[0].width / 2, self.rects[0].height / 2, self.rects[0].weight)
                     bottom_right = self.rects[2]
 
                     if self.is_diff(mini_grid, top_left, top_right) and self.is_diff(mini_grid, top_left, bottom_left) and self.is_diff(mini_grid, top_right, bottom_right) and self.is_diff(mini_grid, bottom_left, bottom_right):
@@ -92,10 +103,10 @@ class Feature:
                         #fail
                         pass
                 else:
-                    top_left = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width / 2, self.rects[0].height / 2, 0)
+                    top_left = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width / 2, self.rects[0].height / 2, self.rects[0].weight)
                     top_right = self.rects[1]
                     bottom_left = self.rects[2]
-                    bottom_right = Rect(self.rects[0].x + (self.rects[0].width / 2), self.rects[0].y + (self.rects[0].height / 2), self.rects[0].width / 2, self.rects[0].height / 2, 0)
+                    bottom_right = Rect(self.rects[0].x + (self.rects[0].width / 2), self.rects[0].y + (self.rects[0].height / 2), self.rects[0].width / 2, self.rects[0].height / 2, self.rects[0].weight)
 
                     if self.is_diff(mini_grid, top_left, top_right) and self.is_diff(mini_grid, top_left, bottom_left) and self.is_diff(mini_grid, top_right, bottom_right) and self.is_diff(mini_grid, bottom_left, bottom_right):
                         #success

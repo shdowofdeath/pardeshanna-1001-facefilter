@@ -67,7 +67,7 @@ def load_stages():
                 for rect in rects_list:
                     r = rect.split(' ')
                     #builds rect
-                    _rect = Rect(int(r[0]), int(r[1]), int(r[2]), int(r[3]), 0)
+                    _rect = Rect(int(r[0]), int(r[1]), int(r[2]), int(r[3]), int(r[4]))
                     #adds to feature
                     _feature.add_rect(_rect)
 
