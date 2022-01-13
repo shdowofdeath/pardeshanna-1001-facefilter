@@ -4,8 +4,9 @@
     <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/ClassifierCascade.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/ClassifierCascade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Feature.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Stage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Stage.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,9 +242,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/Image.py</url>
-          <line>63</line>
-          <option name="timeStamp" value="12" />
+          <url>file://$PROJECT_DIR$/Classes/Rect.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Classes/Stage.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
