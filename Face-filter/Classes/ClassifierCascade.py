@@ -25,11 +25,14 @@ class ClassifierCascade:
         #for cols_image
         pass
 
-    def run_stages(self, mini_grid):
+    def run_stages(self):
         #goes through all the stages (calls function run_features)
         #and all the features in each stage
         #and returns if a face was detected
         #if the first stage didn't succeed return false
 
+        for stage in self.stages:
+            if not stage.run_features(self.mini_grid):
+                return False
 
-        pass
+        return True
