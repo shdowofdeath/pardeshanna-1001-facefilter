@@ -49,10 +49,10 @@ class Feature:
                         #2 rects
                         if(self.is_diff(mini_grid,self.rects[0], self.rects[1])):
                             #success (return true)
-                            pass
+                            return True
                         else:
                             #fail
-                            pass
+                            return False
                     elif((self.rects[1].y - self.rects[0].y) * 2 == (self.rects[0].height - self.rects[1].height)):
                         #3 rects
                         middle = self.rects[1]
@@ -60,20 +60,20 @@ class Feature:
                         below = Rect(self.rects[0].x, self.rects[1].y + (self.rects[0].height / 3), self.rects[0].width, self.rects[0].height / 3, self.rects[0].weight)
                         if(self.is_diff(mini_grid,above, middle) and self.is_diff(mini_grid,below, middle)):
                             #success
-                            pass
+                            return True
                         else:
                             #fail
-                            pass
+                            return False
                 elif self.rects[0].y == self.rects[1].y: #stands
                     #x && width
                     if ((self.rects[1].x - self.rects[0].x) == (self.rects[0].width - self.rects[1].width)):
                         # 2 rects
                         if (self.is_diff(mini_grid, self.rects[0], self.rects[1])):
                             # success (return true)
-                            pass
+                            return True
                         else:
                             # fail
-                            pass
+                            return False
                     elif ((self.rects[1].x - self.rects[0].x) * 2 == (self.rects[0].width - self.rects[1].width)):
                         # 3 rects
                         middle = self.rects[1]
@@ -82,10 +82,10 @@ class Feature:
                                      self.rects[0].height, self.rects[0].weight)
                         if (self.is_diff(mini_grid, left, middle) and self.is_diff(mini_grid, right, middle)):
                             # success
-                            pass
+                            return True
                         else:
                             # fail
-                            pass
+                            return False
                 else:
                     #one in one
                     pass
@@ -98,10 +98,10 @@ class Feature:
 
                     if self.is_diff(mini_grid, top_left, top_right) and self.is_diff(mini_grid, top_left, bottom_left) and self.is_diff(mini_grid, top_right, bottom_right) and self.is_diff(mini_grid, bottom_left, bottom_right):
                         #success
-                        pass
+                        return True
                     else:
                         #fail
-                        pass
+                        return False
                 else:
                     top_left = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width / 2, self.rects[0].height / 2, self.rects[0].weight)
                     top_right = self.rects[1]
@@ -110,9 +110,7 @@ class Feature:
 
                     if self.is_diff(mini_grid, top_left, top_right) and self.is_diff(mini_grid, top_left, bottom_left) and self.is_diff(mini_grid, top_right, bottom_right) and self.is_diff(mini_grid, bottom_left, bottom_right):
                         #success
-                        pass
+                        return True
                     else:
                         #fail
-                        pass
-
-        pass
+                        return False

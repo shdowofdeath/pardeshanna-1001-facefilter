@@ -30,4 +30,6 @@ class ClassifierCascade:
         #and all the features in each stage
         #and returns if a face was detected
         #if the first stage didn't succeed return false
+
+
         pass
