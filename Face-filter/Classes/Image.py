@@ -16,6 +16,7 @@ class Image:
     def __init__(self, path):
         self.data = cv2.imread(path)#sets the image data from the path
         self.size = self.data.shape
+        self.path = path = path
         self.arr = [[]]
 
     def img_to_array(self):
@@ -55,3 +56,9 @@ class Image:
                 #save previous row
                 y = self.arr[i - 1][j] if i > 0 else 0
                 self.arr[i][j] = self.arr[i][j] + x + y - z
+    def draw_mini_grid(self, start, end):
+        color = (255,255,255)
+        thickness = 1
+        image = cv2.rectangle(self.data, start, end, color, thickness)
+        cv2.imshow("GreyScale: ", self.data)
+        cv2.waitKey(0)
