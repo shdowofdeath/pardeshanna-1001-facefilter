@@ -3,7 +3,7 @@ This is a class of Tree.
 
 Contains the tree nodes and the count of the tree
 """
-
+import TreeNode
 class Tree:
     def __init__(self, count):
         self.count = count
