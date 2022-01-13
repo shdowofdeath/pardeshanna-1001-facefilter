@@ -8,9 +8,10 @@ Contains the tilt of the feature
 """
 
 class Feature:
-    def __init__(self, is_tilted):
+    def __init__(self, is_tilted, threshold):
         self.rects = []
         self.is_tilted = is_tilted
+        self.threshold = threshold
 
     def add_rect(self, rect):
         self.rects.append(rect)
@@ -22,7 +23,7 @@ class Feature:
         #return if the difference is closer to 1 (1/threshold?)
         pass
 
-    def calc_rects_diff(self, mini_grid):
+    def is_feature_existent(self, mini_grid):
         #check the number of rects there are:
         #if there are two => send both to "is_diff" and return if there is a difference
         #if there are three => send two sets of rects to "is_diff" and return if there is a difference in BOTH

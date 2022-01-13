@@ -57,7 +57,7 @@ def load_stages():
                 _tree_node = TreeNode(treenode['threshold'], left, right)
 
                 #builds feature
-                _feature = Feature(feature['tilted'])
+                _feature = Feature(feature['tilted'], treenode['threshold'])
 
                 #gets rects from XML
                 rects = feature['rects']
