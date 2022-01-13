@@ -17,10 +17,16 @@ class Stage:
 
     def run_features(self, mini_grid):
         threshold = 0
+        node_counter = 0
         for tree in self.trees:
             for node in tree:
                 if node.feature.is_feature_existent(mini_grid):
-                    if node.left == 0
-
-
-        pass
+                    if node.right != 1:
+                        threshold += node.right
+                else:
+                    if node.left != 1:
+                        threshold = node.left
+        if threshold >= self.threshold:
+            return True
+        else:
+            return False
