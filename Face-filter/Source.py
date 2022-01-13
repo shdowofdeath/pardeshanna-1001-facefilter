@@ -12,7 +12,7 @@ def main():
 
     stages = load_stages()
     cascade = ClassifierCascade(stages)
-    cascade.detect_face(img)
+    #cascade.detect_face(img)
     cv2.imshow("GreyScale: ", img.data)
     cv2.waitKey(0)
 

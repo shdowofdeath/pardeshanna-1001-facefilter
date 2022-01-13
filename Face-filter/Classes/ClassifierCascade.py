@@ -21,8 +21,7 @@ class ClassifierCascade:
         #this function should detect the face
         #mini_grid = 0,0
         #for rows_image
-            #for cols_image
-
+        #for cols_image
         pass
 
     def run_stages(self, mini_grid):
