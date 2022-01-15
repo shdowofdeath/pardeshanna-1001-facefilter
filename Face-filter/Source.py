@@ -1,12 +1,12 @@
 from Classes.Image import *
 from Classes.ClassifierCascade import *
 from Parser.parser import load_stages
-
+from Constants import const_nums
 
 def main():
     img = Image("FaceExamples/test_1.png")
     img.greyscale()
-    img.resize(ROWS, COLS)
+    img.resize(const_nums.ROWS, const_nums.COLS)
     img.img_to_array()
     img.integral_img()
     stages = load_stages()

@@ -6,6 +6,8 @@ Contains the stages.
 Contains the main classification function that goes through the features.
 """
 from Classes.Stage import *
+from Constants import const_nums
+
 
 class ClassifierCascade:
     def __init__(self, stages):
@@ -18,12 +20,21 @@ class ClassifierCascade:
         end_row = 24
         start_col = 0
         end_col = 24
+        counter = 0
+
         self.mini_grid = image.arr[start_row:end_row, start_col:end_col]
-        #image.draw_mini_grid((0,0), (24,24))
-        if(self.run_stages()):
-            print("FACE!!!")
-        else:
-            print("NO!!!!")
+
+        for row in range(const_nums.ROWS - 24):
+            for col in range(const_nums.COLS - 24):
+                #image.draw_mini_grid((0, 0), (24, 24))
+                if(self.run_stages()):
+                    print("FACE!!!")
+                    break
+                else:
+                    print("Next mini_grid")
+
+                print(counter)
+                counter += 1
         #this function should detect the face
         #mini_grid = 0,0
         #for rows_image

@@ -1,2 +1,2 @@
-ROWS = 75
-COLS = 75
+ROWS = 50
+COLS = 50

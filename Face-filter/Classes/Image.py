@@ -1,8 +1,7 @@
 import cv2
 import numpy as np
 from numpy import asarray
-ROWS = 75
-COLS = 75
+from Constants import const_nums
 
 """
 This is the Image class.
@@ -27,8 +26,10 @@ class Image:
         self.invert_img_array()
 
     def invert_img_array(self):
-        for row in range(ROWS):
-             for col in range(COLS):
+        #makes black pixles 1
+        #makes white pixles 0
+        for row in range(const_nums.ROWS):
+             for col in range(const_nums.COLS):
                 invert_pixel = 1 - self.arr[row][col]
                 self.arr[row][col] = invert_pixel
 
@@ -47,9 +48,9 @@ class Image:
 
     def integral_img(self):
         #goes through the rows
-        for i in range(ROWS):
+        for i in range(const_nums.ROWS):
             #goes through the columns
-            for j in range(COLS):
+            for j in range(const_nums.COLS):
                 #if row and column bigger than 0 (can use previous diagonal), save previous diagonal
                 z = self.arr[i - 1][j - 1] if (i > 0 and j > 0) else 0
                 #save previous column

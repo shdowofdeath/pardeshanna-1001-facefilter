@@ -42,7 +42,7 @@ class Feature:
         #we are not checking tilted rects or "one in one" rects for now
 
         if(not self.is_tilted):#handling not tilted
-            if self.rects.count == 2:
+            if len(self.rects) == 2:
                 if self.rects[0].x == self.rects[1].x: #lays
                     #y && height
                     if((self.rects[1].y - self.rects[0].y) == (self.rects[0].height - self.rects[1].height)):
