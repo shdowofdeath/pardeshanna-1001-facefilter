@@ -3,8 +3,8 @@ This is a class of a stage.
 
 Contains the stage threshold and the list of trees in the stage
 """
-import Tree
-import Feature
+from Classes.Tree import *
+from Classes.Feature import *
 
 class Stage:
     def __init__(self, count, threshold):
@@ -21,11 +21,11 @@ class Stage:
         for tree in self.trees:
             for node in tree:
                 if node.feature.is_feature_existent(mini_grid):
-                    if node.right != 1:
+                    if node.right != 1:#stop traversing nodes add val to threshold
                         threshold += node.right
                 else:
-                    if node.left != 1:
-                        threshold = node.left
+                    if node.left != 1:#stop traversing nodes add val to threshold
+                        threshold += node.left
         if threshold >= self.threshold:
             return True
         else:

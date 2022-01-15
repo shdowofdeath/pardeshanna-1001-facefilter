@@ -1,4 +1,4 @@
-import Rect
+from Classes.Rect import *
 """
 This is a class of a haar feature.
 
