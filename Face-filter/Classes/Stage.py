@@ -19,16 +19,17 @@ class Stage:
         threshold = 0
         i = 0
         for tree in self.trees:
-            threshold = 0
             for node in tree.nodes:
                 if node.feature.is_feature_existent(mini_grid):
                     if node.right != 1:#stop traversing nodes add val to threshold
                         threshold += node.right
-                        print(threshold)
+                        print("Curr threshold: ", threshold)
+                        break
                 else:
                     if node.left != 1:#stop traversing nodes add val to threshold
                         threshold += node.left
-                        print(threshold)
+                        print("Curr threshold: ", threshold)
+                        break
         print("Stage threshold ", threshold)
         print("Wanted threshold ", self.threshold)
         if threshold >= self.threshold:

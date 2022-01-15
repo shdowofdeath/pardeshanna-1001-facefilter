@@ -28,6 +28,7 @@ class ClassifierCascade:
             for row in range(const_nums.ROWS - 24):
                 self.mini_grid = image.arr[row:row+24, col:col+24]
                 image.draw_mini_grid((row, col), (row + 24, col + 24))
+                print("NEW GRID")
                 if(self.run_stages()):
                     print("FACE!!!")
                     break
