@@ -14,6 +14,7 @@ Contains the Integral image feature which optimizes the algorithim
 class Image:
     def __init__(self, path):
         self.data = cv2.imread(path)#sets the image data from the path
+        self.temp_data = cv2.imread(path)
         self.size = self.data.shape
         self.path = path = path
         self.arr = [[]]
@@ -65,4 +66,5 @@ class Image:
         thickness = 1
         image = cv2.rectangle(self.data, start, end, color, thickness)
         cv2.imshow("GreyScale: ", self.data)
-        cv2.waitKey(0)
+        self.data = self.temp_data
+        #cv2.waitKey(0)

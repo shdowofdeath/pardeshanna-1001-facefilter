@@ -20,4 +20,6 @@ class Rect:
         x = mini_grid[int(self.x)][int(self.y) - 1] if (int(self.y) > 0) else 0
         y = mini_grid[int(self.x) - 1][int(self.y)] if (int(self.x) > 0) else 0
         z = mini_grid[int(self.x) + int(self.width) - 1][int(self.y) + int(self.height) - 1]
-        return z - x - y + w
+        value = ( z - x - y + w) / (self.width * self.height)
+        print(value)
+        return value
