@@ -22,11 +22,12 @@ class ClassifierCascade:
         end_col = 24
         counter = 0
 
-        self.mini_grid = image.arr[start_row:end_row, start_col:end_col]
+        #self.mini_grid = image.arr[start_row:end_row, start_col:end_col]
 
-        for row in range(const_nums.ROWS - 24):
-            for col in range(const_nums.COLS - 24):
-                #image.draw_mini_grid((0, 0), (24, 24))
+        for col in range(const_nums.COLS - 24):
+            for row in range(const_nums.ROWS - 24):
+                self.mini_grid = image.arr[row:row+24, col:col+24]
+                image.draw_mini_grid((row, col), (row + 24, col + 24))
                 if(self.run_stages()):
                     print("FACE!!!")
                     break

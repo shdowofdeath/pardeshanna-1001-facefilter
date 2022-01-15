@@ -58,8 +58,10 @@ class Image:
                 #save previous row
                 y = self.arr[i - 1][j] if i > 0 else 0
                 self.arr[i][j] = self.arr[i][j] + x + y - z
+
+
     def draw_mini_grid(self, start, end):
-        color = (255,255,255)
+        color = (128,0,128)
         thickness = 1
         image = cv2.rectangle(self.data, start, end, color, thickness)
         cv2.imshow("GreyScale: ", self.data)
