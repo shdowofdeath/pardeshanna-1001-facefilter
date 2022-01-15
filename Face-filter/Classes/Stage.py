@@ -24,9 +24,13 @@ class Stage:
                 if node.feature.is_feature_existent(mini_grid):
                     if node.right != 1:#stop traversing nodes add val to threshold
                         threshold += node.right
+                        print(threshold)
                 else:
                     if node.left != 1:#stop traversing nodes add val to threshold
                         threshold += node.left
+                        print(threshold)
+        print("Stage threshold ", threshold)
+        print("Wanted threshold ", self.threshold)
         if threshold >= self.threshold:
             return True
         else:

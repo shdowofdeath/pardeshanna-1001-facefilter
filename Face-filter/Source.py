@@ -1,3 +1,5 @@
+import copy
+
 from Classes.Image import *
 from Classes.ClassifierCascade import *
 from Parser.parser import load_stages
@@ -9,6 +11,7 @@ def main():
     img.resize(const_nums.ROWS, const_nums.COLS)
     img.img_to_array()
     img.integral_img()
+    img.cache = copy.deepcopy(img.data)
     stages = load_stages()
     cascade = ClassifierCascade(stages)
     cascade.detect_face(img)

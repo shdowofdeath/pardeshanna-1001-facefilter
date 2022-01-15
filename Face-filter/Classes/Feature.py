@@ -29,7 +29,8 @@ class Feature:
             diff = rect1_value - rect2_value
         else: #rect 2 is the black
             diff = rect2_value - rect1_value
-
+        print("Feature diff: ", diff)
+        print("Feature threshold", self.threshold)
         if diff >= self.threshold:
             return True
         return False

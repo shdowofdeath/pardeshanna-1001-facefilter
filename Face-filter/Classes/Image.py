@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from numpy import asarray
 from Constants import const_nums
-
+import copy
 """
 This is the Image class.
 
@@ -13,8 +13,8 @@ Contains the Integral image feature which optimizes the algorithim
 
 class Image:
     def __init__(self, path):
-        self.data = cv2.imread(path)#sets the image data from the path
-        self.temp_data = cv2.imread(path)
+        self.data = cv2.imread(path)#sets the image data from the path\
+        self.cache = 0
         self.size = self.data.shape
         self.path = path = path
         self.arr = [[]]
@@ -64,7 +64,7 @@ class Image:
     def draw_mini_grid(self, start, end):
         color = (128,0,128)
         thickness = 1
-        image = cv2.rectangle(self.data, start, end, color, thickness)
+        cv2.rectangle(self.data, start, end, color, thickness)
         cv2.imshow("GreyScale: ", self.data)
-        self.data = self.temp_data
-        #cv2.waitKey(0)
+        self.data = copy.deepcopy(self.cache)
+        cv2.waitKey(1)
