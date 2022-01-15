@@ -24,6 +24,7 @@ class Image:
         self.arr = asarray(self.data)
         self.arr = self.arr.astype('float32')
         self.arr /= 255.0
+        self.invert_img_array()
 
     def invert_img_array(self):
         for row in range(ROWS):

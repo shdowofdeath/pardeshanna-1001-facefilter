@@ -17,9 +17,10 @@ class Stage:
 
     def run_features(self, mini_grid):
         threshold = 0
-        node_counter = 0
+        i = 0
         for tree in self.trees:
-            for node in tree:
+            threshold = 0
+            for node in tree.nodes:
                 if node.feature.is_feature_existent(mini_grid):
                     if node.right != 1:#stop traversing nodes add val to threshold
                         threshold += node.right

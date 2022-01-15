@@ -89,7 +89,7 @@ class Feature:
                 else:
                     #one in one
                     pass
-            elif self.rects.count() == 3:#there are 4 rects
+            elif len(self.rects) == 3:#there are 4 rects
                 if(self.rects[0].x == self.rects[1].x and self.rects[0].y == self.rects[1].y): #same starting point
                     top_left = self.rects[1]
                     top_right = Rect(self.rects[0].x + (self.rects[0].width / 2), self.rects[0].y, self.rects[0].width / 2, self.rects[0].height / 2, self.rects[0].weight)
