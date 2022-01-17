@@ -10,6 +10,7 @@ def main():
     img.greyscale()
     img.resize(const_nums.ROWS, const_nums.COLS)
     img.img_to_array()
+    #img.invert_img_array()
     img.integral_img()
     img.cache = copy.deepcopy(img.data)
     stages = load_stages()
