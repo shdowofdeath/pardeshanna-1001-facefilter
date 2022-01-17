@@ -63,9 +63,38 @@ class Image:
 
 
     def draw_mini_grid(self, start, end):
-        color = (128,0,128)
+        color = (255,0,255)
         thickness = 1
         cv2.rectangle(self.data, start, end, color, thickness)
+        # cv2.imshow("GreyScale: ", self.data)
+        # self.data = copy.deepcopy(self.cache)
+        # cv2.waitKey(10)
+
+    def draw_rects(self, rects, start_coords):
+        start = (start_coords[0], start_coords[1])#start of mini grid
+        end = (start_coords[0] + 24, start_coords[1] + 24)#end of mini grid
+        self.draw_mini_grid(start, end)
+        for rect in rects:
+            if rect.weight < 0:#black feature
+                color = (0,255,255)
+            else:#white feature
+                color = (255, 255, 0)
+            thickness = -10
+            start = (start_coords[0] + rect.x, start_coords[1] + rect.y)#start of feature
+            end = (start_coords[0] + rect.x + rect.width, start_coords[1] + rect.y + rect.height)#end of feature
+            cv2.rectangle(self.data, start, end, color, thickness)
         cv2.imshow("GreyScale: ", self.data)
         self.data = copy.deepcopy(self.cache)
         cv2.waitKey(1)
+
+    # def print_stage_num(self, stage_num):
+    #     org = (50, 50)
+    #     font = cv2.FONT_HERSHEY_SIMPLEX
+    #     color = (255,255,255)
+    #     thickness = 2
+    #     fontScale = 1
+    #     self.data = copy.deepcopy(self.cache)
+    #     cv2.putText(self.data, 'Stage: ' + str(stage_num), org, font, fontScale, color, thickness, cv2.LINE_AA)
+    #     cv2.imshow("Stage num", self.data)
+    #     self.data = copy.deepcopy(self.cache)
+    #     cv2.waitKey(0)

@@ -15,20 +15,20 @@ class Stage:
     def add_tree(self, tree):
         self.trees.append(tree)
 
-    def run_features(self, mini_grid):
+    def run_features(self, mini_grid, image, start_coords):
         threshold = 0
         i = 0
         for tree in self.trees:
             for node in tree.nodes:
-                if node.feature.is_feature_existent(mini_grid):
+                if node.feature.is_feature_existent(mini_grid, image, start_coords):
                     if node.right != 1:#stop traversing nodes add val to threshold
                         threshold += node.right
-                        print("Curr threshold: ", threshold)
+                        print("Curr stage threshold: ", threshold)
                         break
                 else:
                     if node.left != 1:#stop traversing nodes add val to threshold
                         threshold += node.left
-                        print("Curr threshold: ", threshold)
+                        print("Curr stage threshold: ", threshold)
                         break
         print("Stage threshold ", threshold)
         print("Wanted threshold ", self.threshold)
