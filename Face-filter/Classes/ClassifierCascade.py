@@ -34,7 +34,7 @@ class ClassifierCascade:
                 if(self.run_stages(image,start_coords)):
                     print("FACE!!!")
                     is_face = True
-                    cv2.waitKey(0)
+                    image.print_og_image_face(row, col)
                     break
                 else:
                     print("Next mini_grid")

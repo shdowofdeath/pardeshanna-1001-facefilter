@@ -4,10 +4,11 @@
     <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/ClassifierCascade.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/ClassifierCascade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Feature.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Feature.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Rect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Rect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Stage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Stage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants/const_nums.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const_nums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FaceFilterMagsh/Resources/black_on_white.png" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/black_on_white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FaceFilterMagsh/Resources/test_10.png" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FaceFilterMagsh/Resources/test_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FaceFilterMagsh/Resources/test_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_5.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\FaceExamples" />
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\Parser" />
     </key>
   </component>
@@ -253,20 +255,14 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/Feature.py</url>
-          <line>24</line>
-          <option name="timeStamp" value="49" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/ClassifierCascade.py</url>
-          <line>58</line>
-          <option name="timeStamp" value="52" />
+          <url>file://$PROJECT_DIR$/Classes/Image.py</url>
+          <line>125</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

@@ -98,3 +98,29 @@ class Image:
     #     cv2.imshow("Stage num", self.data)
     #     self.data = copy.deepcopy(self.cache)
     #     cv2.waitKey(0)
+
+    def print_og_image_face(self, x, y):
+        dimensions = self.whole_img.shape
+        height = self.whole_img.shape[0]
+        width = self.whole_img.shape[1]
+        area = height * width
+        mini_height = const_nums.ROWS
+        mini_width = const_nums.COLS
+        mini_area = mini_height * mini_width
+
+        relativity_x = int(width / mini_width)
+        relativity_y = int(height / mini_height)
+        x = x * relativity_x
+        y = y * relativity_y
+
+        width = 24 * relativity_x
+        height = 24 * relativity_y
+
+        start = (x, y)  # start of mini grid
+        end = (x + width + 20, y + height + 20)  # end of mini grid
+        color = (51, 255, 51)
+        thickness = 1
+
+        cv2.rectangle(self.whole_img, start, end, color, thickness)
+        cv2.imshow("Real Image", self.whole_img)
+        cv2.waitKey(0)
