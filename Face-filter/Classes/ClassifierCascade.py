@@ -18,18 +18,23 @@ class ClassifierCascade:
 
     def detect_face(self, image):
         counter = 0
+        is_face = False
 
         #self.mini_grid = image.arr[start_row:end_row, start_col:end_col]
         start_coords = [0, 0]
         for col in range(const_nums.COLS - 24):
+            if is_face:
+                break
             for row in range(const_nums.ROWS - 24):
                 self.mini_grid = image.arr[row:row+24, col:col+24]
                 image.draw_mini_grid((row, col), (row + 24, col + 24))
                 start_coords[0] = row
                 start_coords[1] = col
-                print("NEW GRID")
+                #print("NEW GRID")
                 if(self.run_stages(image,start_coords)):
                     print("FACE!!!")
+                    is_face = True
+                    cv2.waitKey(0)
                     break
                 else:
                     print("Next mini_grid")
@@ -48,7 +53,10 @@ class ClassifierCascade:
         #and returns if a face was detected
         #if the first stage didn't succeed return false
 
-        for stage in self.stages:
+        #stages_list = self.stages[0:3]
+
+        for stage in self.stages[0:4]:
+            print("Stage count: ",stage.count)
             if not stage.run_features(self.mini_grid, image, start_coords):
                 return False
             #image.print_stage_num(stage.count)
