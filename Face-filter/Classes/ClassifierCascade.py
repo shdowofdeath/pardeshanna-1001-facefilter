@@ -8,6 +8,7 @@ Contains the main classification function that goes through the features.
 from Classes.Stage import *
 from Constants import const_nums
 import cv2
+import time
 
 
 class ClassifierCascade:
@@ -34,6 +35,8 @@ class ClassifierCascade:
                 if(self.run_stages(image,start_coords)):
                     print("FACE!!!")
                     is_face = True
+                    toc = time.perf_counter()
+                    print("Detected face in " + str(toc) + " seconds")
                     image.print_og_image_face(row, col)
                     break
                 else:
@@ -45,7 +48,6 @@ class ClassifierCascade:
         #mini_grid = 0,0
         #for rows_image
         #for cols_image
-        pass
 
     def run_stages(self, image, start_coords):
         #goes through all the stages (calls function run_features)

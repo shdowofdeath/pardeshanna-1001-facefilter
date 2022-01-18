@@ -4,8 +4,10 @@ from Classes.Image import *
 from Classes.ClassifierCascade import *
 from Parser.parser import load_stages
 from Constants import const_nums
+import time
 
 def main():
+    tic = time.perf_counter()
     img = Image("FaceExamples/test_1.png")
     img.greyscale()
     img.resize(const_nums.ROWS, const_nums.COLS)
