@@ -48,7 +48,8 @@ class Feature:
                     #y && height
                     if((self.rects[1].y - self.rects[0].y) == (self.rects[0].height - self.rects[1].height)):
                         #2 rects
-                        if(self.is_diff(mini_grid,self.rects[0], self.rects[1])):
+                        rect1 = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width, self.rects[0].height / 2, self.rects[0].weight)
+                        if(self.is_diff(mini_grid,rect1, self.rects[1])):
                             #success (return true)
                             return True
                         else:
@@ -69,7 +70,8 @@ class Feature:
                     #x && width
                     if ((self.rects[1].x - self.rects[0].x) == (self.rects[0].width - self.rects[1].width)):
                         # 2 rects
-                        if (self.is_diff(mini_grid, self.rects[0], self.rects[1])):
+                        rect1 = Rect(self.rects[0].x, self.rects[0].y, self.rects[0].width / 2, self.rects[0].height, self.rects[0].weight)
+                        if (self.is_diff(mini_grid, rect1, self.rects[1])):
                             # success (return true)
                             return True
                         else:

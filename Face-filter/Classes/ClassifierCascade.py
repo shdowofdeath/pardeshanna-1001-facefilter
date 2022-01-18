@@ -17,10 +17,6 @@ class ClassifierCascade:
         self.mini_grid = [[]]
 
     def detect_face(self, image):
-        start_row =0
-        end_row = 24
-        start_col = 0
-        end_col = 24
         counter = 0
 
         #self.mini_grid = image.arr[start_row:end_row, start_col:end_col]
