@@ -122,5 +122,5 @@ class Image:
         thickness = 1
 
         cv2.rectangle(self.whole_img, start, end, color, thickness)
-        cv2.imshow("Real Image", self.whole_img)
-        cv2.waitKey(0)
+        # cv2.imshow("Real Image", self.whole_img)
+        # cv2.waitKey(0)

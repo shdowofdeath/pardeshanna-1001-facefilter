@@ -24,8 +24,8 @@ class ClassifierCascade:
         #self.mini_grid = image.arr[start_row:end_row, start_col:end_col]
         start_coords = [0, 0]
         for col in range(const_nums.COLS - 24):
-            if is_face:
-                break
+            # if is_face:
+            #     break
             for row in range(const_nums.ROWS - 24):
                 self.mini_grid = image.arr[row:row+24, col:col+24]
                 image.draw_mini_grid((row, col), (row + 24, col + 24))
@@ -34,11 +34,11 @@ class ClassifierCascade:
                 #print("NEW GRID")
                 if(self.run_stages(image,start_coords)):
                     print("FACE!!!")
-                    is_face = True
+                    #is_face = True
                     toc = time.perf_counter()
                     print("Detected face in " + str(toc) + " seconds")
                     image.print_og_image_face(row, col)
-                    break
+                    #break
                 else:
                     print("Next mini_grid")
 
