@@ -16,6 +16,9 @@ class Image:
         self.data = cv2.imread(path)#sets the image data from the path
         self.cache = 0
         self.whole_img = copy.deepcopy(self.data)
+        #resize og image
+        dim = (450, 450)
+        self.whole_img = cv2.resize(self.data, dim, interpolation=cv2.INTER_AREA)
         self.size = self.data.shape
         self.path = path = path
         self.arr = [[]]
@@ -122,5 +125,5 @@ class Image:
         thickness = 1
 
         cv2.rectangle(self.whole_img, start, end, color, thickness)
-        # cv2.imshow("Real Image", self.whole_img)
-        # cv2.waitKey(0)
+        cv2.imshow("Real Image", self.whole_img)
+        cv2.waitKey(0)
