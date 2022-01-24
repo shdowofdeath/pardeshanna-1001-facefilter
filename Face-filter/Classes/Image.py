@@ -13,7 +13,10 @@ Contains the Integral image feature which optimizes the algorithim
 
 class Image:
     def __init__(self, path):
-        self.data = cv2.imread(path)#sets the image data from the path
+        if(isinstance(path, str)):
+            self.data = cv2.imread(path)#sets the image data from the path
+        else:
+            self.data = path
         self.cache = 0
         self.whole_img = copy.deepcopy(self.data)
         #resize og image
@@ -128,4 +131,4 @@ class Image:
 
         cv2.rectangle(self.whole_img, start, end, color, thickness)
         cv2.imshow("Real Image", self.whole_img)
-        cv2.waitKey(0)
+        cv2.waitKey(300)

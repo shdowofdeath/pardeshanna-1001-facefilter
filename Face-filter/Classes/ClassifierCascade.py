@@ -34,9 +34,10 @@ class ClassifierCascade:
                 start_coords[1] = col
                 #print("NEW GRID")
                 if(self.run_stages(image,start_coords)):
-                    print("FACE!!!")
+                    #print("FACE!!!")
                     #image.print_og_image_face(row, col)
                     faces_list.append([row, col])
+
                     #return True
                     is_face = True
                     #toc = time.perf_counter()
