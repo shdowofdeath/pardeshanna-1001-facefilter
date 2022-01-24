@@ -103,6 +103,8 @@ class Image:
     #     cv2.waitKey(0)
 
     def print_og_image_face(self, x, y):
+        x = int(x)
+        y = int(y)
         dimensions = self.whole_img.shape
         height = self.whole_img.shape[0]
         width = self.whole_img.shape[1]
