@@ -12,7 +12,7 @@ def automation():
     pics_list = []
     count = 0
     for filename in os.listdir(directory):
-        if filename.endswith(".png")  and "test" in filename and  "bad" not in filename:
+        if (filename.endswith(".png") or filename.endswith(".jpg")) and ("test" in filename or '1' in filename) and  "bad" not in filename:
             pics_list.append(filename)
             #tic = time.perf_counter()
             print('FaceExamples/' + filename)
@@ -27,12 +27,14 @@ def automation():
             cascade = ClassifierCascade(stages)
             if(cascade.detect_face(img)):
                 success_list.append(True)
+                # cv2.imshow("Real Final Image", img.whole_img)
+                # cv2.waitKey(1)
             else:
                 success_list.append(False)
+
             # cv2.imshow("GreyScale: ", img.data)
             # cv2.waitKey(0)
-            # cv2.imshow("Real Final Image", img.whole_img)
-            # cv2.waitKey(0)
+
     print(success_list)
     print(pics_list)
     print("Accuracy: " + str(success_list.count(True) / len(success_list)))

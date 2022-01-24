@@ -34,11 +34,12 @@ class ClassifierCascade:
                 #print("NEW GRID")
                 if(self.run_stages(image,start_coords)):
                     print("FACE!!!")
+                    image.print_og_image_face(row, col)
                     return True
                     #is_face = True
                     toc = time.perf_counter()
                     print("Detected face in " + str(toc) + " seconds")
-                    #image.print_og_image_face(row, col)
+                    image.print_og_image_face(row, col)
                     #break
                 else:
                     #print("Next mini_grid")
