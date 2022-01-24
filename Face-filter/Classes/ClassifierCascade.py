@@ -20,6 +20,7 @@ class ClassifierCascade:
     def detect_face(self, image):
         counter = 0
         is_face = False
+        faces_list = []
 
         #self.mini_grid = image.arr[start_row:end_row, start_col:end_col]
         start_coords = [0, 0]
@@ -34,12 +35,12 @@ class ClassifierCascade:
                 #print("NEW GRID")
                 if(self.run_stages(image,start_coords)):
                     print("FACE!!!")
-                    image.print_og_image_face(row, col)
-                    return True
-                    #is_face = True
-                    toc = time.perf_counter()
-                    print("Detected face in " + str(toc) + " seconds")
-                    image.print_og_image_face(row, col)
+                    #image.print_og_image_face(row, col)
+                    faces_list.append(start_coords)
+                    #return True
+                    is_face = True
+                    #toc = time.perf_counter()
+                    #print("Detected face in " + str(toc) + " seconds")
                     #break
                 else:
                     #print("Next mini_grid")
@@ -50,7 +51,20 @@ class ClassifierCascade:
         #mini_grid = 0,0
         #for rows_image
         #for cols_image
-        return False
+        avrg_coords = self.calc_average_coords(faces_list)
+        if is_face:
+            image.print_og_image_face(avrg_coords[0], avrg_coords[1])
+        return is_face
+
+    def calc_average_coords(self, faces_list):
+        sum_x =0
+        sum_y =0
+
+        for face in faces_list:
+            sum_x+=face[0]
+            sum_y+=face[1]
+
+        return [sum_x / len(faces_list), sum_y / len(faces_list)]
 
     def run_stages(self, image, start_coords):
         #goes through all the stages (calls function run_features)
@@ -60,7 +74,7 @@ class ClassifierCascade:
 
         #stages_list = self.stages[0:3]
 
-        for stage in self.stages[0:4]:
+        for stage in self.stages[0:3]:
             #print("Stage count: ",stage.count)
             if not stage.run_features(self.mini_grid, image, start_coords):
                 return False
