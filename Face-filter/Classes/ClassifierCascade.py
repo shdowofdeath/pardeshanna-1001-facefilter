@@ -52,9 +52,9 @@ class ClassifierCascade:
         #mini_grid = 0,0
         #for rows_image
         #for cols_image
-        avrg_coords = self.calc_average_coords(faces_list)
         if is_face:
-            image.print_og_image_face(avrg_coords[0], avrg_coords[1])
+            avrg_coords = self.calc_average_coords(faces_list)
+            #image.print_og_image_face(avrg_coords[0], avrg_coords[1])
         return is_face
 
     def calc_average_coords(self, faces_list):
@@ -64,7 +64,6 @@ class ClassifierCascade:
         for face in faces_list:
             sum_x+=face[0]
             sum_y+=face[1]
-
         return [sum_x / len(faces_list), sum_y / len(faces_list)]
 
     def run_stages(self, image, start_coords):

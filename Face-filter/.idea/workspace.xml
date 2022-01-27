@@ -4,7 +4,10 @@
     <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/ClassifierCascade.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/ClassifierCascade.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FaceFilterMagsh/.idea/FaceFilterMagsh.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../FaceFilterMagsh/.idea/FaceFilterMagsh.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FaceFilterMagsh/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../FaceFilterMagsh/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FaceFilterMagsh/venv/FaceAlgorithm.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FaceFilterMagsh/venv/FaceAlgorithm.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +82,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FaceFilterMagsh" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -92,7 +95,7 @@
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\Parser" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Stream">
+  <component name="RunManager" selected="Python.Source">
     <configuration name="Automation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Face-filter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -207,10 +210,10 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Stream" />
-        <item itemvalue="Python.Automation" />
         <item itemvalue="Python.Source" />
+        <item itemvalue="Python.Automation" />
         <item itemvalue="Python.ClassifierCascade" />
+        <item itemvalue="Python.Stream" />
         <item itemvalue="Python.parser (1)" />
       </list>
     </recent_temporary>
