@@ -29,7 +29,7 @@ class ClassifierCascade:
             #     break
             for row in range(const_nums.ROWS - 24):
                 self.mini_grid = image.arr[row:row+24, col:col+24]
-                #image.draw_mini_grid((row, col), (row + 24, col + 24))
+                image.draw_mini_grid((row, col), (row + 24, col + 24))
                 start_coords[0] = row
                 start_coords[1] = col
                 #print("NEW GRID")
@@ -54,7 +54,7 @@ class ClassifierCascade:
         #for cols_image
         if is_face:
             avrg_coords = self.calc_average_coords(faces_list)
-            #image.print_og_image_face(avrg_coords[0], avrg_coords[1])
+            image.print_og_image_face(avrg_coords[0], avrg_coords[1])
         return is_face
 
     def calc_average_coords(self, faces_list):

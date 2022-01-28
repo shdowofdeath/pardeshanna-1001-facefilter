@@ -8,7 +8,7 @@ import time
 
 def main():
     tic = time.perf_counter()
-    img = Image("FaceExamples/test_27.png")
+    img = Image("FaceExamples/test_17.png")
     img.greyscale()
     img.resize(const_nums.ROWS, const_nums.COLS)
     img.img_to_array()

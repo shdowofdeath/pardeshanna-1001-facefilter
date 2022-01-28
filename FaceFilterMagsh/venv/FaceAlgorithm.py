@@ -162,7 +162,7 @@ def get_mid_point(arr):
                     max_point.set_y(j)
     return max_point
 
-def face_detection(img):
+def edge_detection(img):
     img_black = read_image("../Resources/black.png")
     start_row, end_row, start_col, end_col = 0, MINI_GRID_SIDE, 0, MINI_GRID_SIDE
     img = resize_img(img, ROWS, COLS)
@@ -211,8 +211,8 @@ def main():
     # test_9 = read_image("../Resources/test_9.png")
     # test_10 = read_image("../Resources/test_10.png")
     # test_11 = read_image("../Resources/test_11.png")
-    test_12 = read_image("../Resources/test_12.png")
-    averages_grid, img = face_detection(test_12)
+    test_12 = read_image("../Resources/test_6.png")
+    averages_grid, img = edge_detection(test_12)
     highest, lowest, left, right = find_extreme_case_points(averages_grid)
     #mid_point = get_mid_point(averages_grid)
     left_top_point, right_top_point, left_bottom_point, right_bottom_point = get_rectangle_coordinates(highest, lowest, left, right, averages_grid)
