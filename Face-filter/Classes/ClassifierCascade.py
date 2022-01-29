@@ -54,8 +54,8 @@ class ClassifierCascade:
         #for cols_image
         if is_face:
             avrg_coords = self.calc_average_coords(faces_list)
-            image.print_og_image_face(avrg_coords[0], avrg_coords[1])
-        return is_face
+            #image.print_og_image_face(avrg_coords[0], avrg_coords[1])
+        return is_face, avrg_coords
 
     def calc_average_coords(self, faces_list):
         sum_x =0
