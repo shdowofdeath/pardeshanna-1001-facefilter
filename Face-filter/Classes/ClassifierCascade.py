@@ -64,7 +64,7 @@ class ClassifierCascade:
         for face in faces_list:
             sum_x+=face[0]
             sum_y+=face[1]
-        return [sum_x / len(faces_list), sum_y / len(faces_list)]
+        return [int(sum_x / len(faces_list)), int(sum_y / len(faces_list))]
 
     def run_stages(self, image, start_coords):
         #goes through all the stages (calls function run_features)
