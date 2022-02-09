@@ -2,11 +2,12 @@ import cv2
 from numpy import asarray
 import numpy as np
 from Classes import Point
+from Constants import const_nums
 
-MINI_ROWS = 240
-MINI_COLS = 240
-MINI_GRID_SIDE = 1
-NUM_OF_GRIDS = 240
+# MINI_ROWS = 240
+# MINI_COLS = 240
+# MINI_GRID_SIDE = 1
+# NUM_OF_GRIDS = 240
 
 def read_image(path):
     img = cv2.imread(path)
@@ -29,15 +30,15 @@ def img_to_array(img):
     return pixels
 
 def edge_check_horizontal(arr):
-    for i in range(NUM_OF_GRIDS):
-        for j in range(NUM_OF_GRIDS - 1):
+    for i in range(const_nums.FACE_LEN):
+        for j in range(const_nums.FACE_LEN - 1):
             if (abs(arr[i][j] - arr[i][j + 1]) > 0.05):
                 arr[i][j] = -1
 
 
 def edge_check_vertical(arr):
-    for i in range(NUM_OF_GRIDS - 1):
-        for j in range(NUM_OF_GRIDS):
+    for i in range(const_nums.FACE_LEN - 1):
+        for j in range(const_nums.FACE_LEN):
             if ((arr[i][j] != -1 or arr[i + 1][j] != -1) and (abs(arr[i][j] - arr[i + 1][j]) > 0.05)):
                 arr[i][j] = -1
 
@@ -48,8 +49,8 @@ def draw_line(img, start_x, start_y, end_x, end_y, color):
 
 
 def draw_outline(start_coords, grid, img, marker, color):
-    for i in range(NUM_OF_GRIDS):
-        for j in range(NUM_OF_GRIDS):
+    for i in range(const_nums.FACE_LEN):
+        for j in range(const_nums.FACE_LEN):
             if (grid[i][j] == marker):
                 img = draw_line(img, j + start_coords[1], i + start_coords[0], j + start_coords[1], i + start_coords[0],
                                 color)
@@ -60,14 +61,14 @@ def draw_outline(start_coords, grid, img, marker, color):
 
 def edge_detection(pixels):
     start_row, end_row, start_col, end_col = 0, 1, 0, 1
-    averages_grid = np.empty([MINI_ROWS, MINI_COLS])
+    averages_grid = np.empty([const_nums.FACE_LEN, const_nums.FACE_LEN])
     counter = 1
     row_counter = 0
     col_counter = 0
-    while start_row != MINI_ROWS:
+    while start_row != const_nums.FACE_LEN:
         averages_grid[row_counter][col_counter] = pixels[start_row:end_row, start_col:end_col]
         counter = counter + 1
-        if (end_col == MINI_COLS):
+        if (end_col == const_nums.FACE_LEN):
             start_row += 1
             end_row += 1
             start_col = 0
@@ -86,16 +87,15 @@ def edge_detection(pixels):
 def print_img(img, averages_grid, start_coords):
     cv2.imshow("Before: ", img)
     img = draw_outline(start_coords, averages_grid, img, -1, 0)
-    cv2.rectangle(img, (start_coords[1], start_coords[0]), (start_coords[1] + 240, start_coords[0] + 240), (51, 255, 51), 1)
+    cv2.rectangle(img, (start_coords[1], start_coords[0]), (start_coords[1] + const_nums.FACE_LEN, start_coords[0] + const_nums.FACE_LEN), (51, 255, 51), 1)
     cv2.imshow("After: ", img)
-    cv2.waitKey(0)
 
 
 def most_populated_index(arr):
 
     index = [0, 0, 0]
-    for i in range(120):
-        for j in range(120):
+    for i in range(const_nums.MINI_FACE_LEN):
+        for j in range(const_nums.MINI_FACE_LEN):
             if(arr[j][i] == -1):
                 friends_in_rng = friends_in_range(j,i, arr)
                 if(friends_in_rng > index[2]):
@@ -108,7 +108,7 @@ def most_populated_index(arr):
 def friends_in_range(x,y,arr):
     counter = 0
     f_range = 5
-    if (x - f_range >= 0) and (y - f_range >= 0) and (x + f_range <= 120) and (y + f_range <= 120):
+    if (x - f_range >= 0) and (y - f_range >= 0) and (x + f_range <= const_nums.MINI_FACE_LEN) and (y + f_range <= const_nums.MINI_FACE_LEN):
         checking_arr = arr[x-f_range:x+f_range, y-f_range:y+f_range]
         for i in range(f_range * 2):
             for j in range(f_range * 2):
