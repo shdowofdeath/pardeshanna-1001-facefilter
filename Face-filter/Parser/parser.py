@@ -1,10 +1,17 @@
-from Constants.const_libraries import *
+from Classes.Stage import *
+from Classes.TreeNode import *
+from Classes.Tree import *
+from Classes.Feature import *
+from Classes.Rect import *
+import xmlschema
 
 """
 This function extracts the information from the XML into the classes
 """
+
+
 def load_stages():
-    data_schema = xmlschema.XMLSchema('xml/frontal_face.xsd')
+    data_schema = xmlschema.XMLSchema('./xml/frontal_face.xsd')
     data = data_schema.to_dict('xml/frontal_face')
     stages = data['haarcascade_frontalface_alt2']['stages']['_']
 
@@ -50,7 +57,7 @@ def load_stages():
                 _tree_node = TreeNode(treenode['threshold'], left, right)
 
                 #builds feature
-                _feature = Feature(feature['tilted'])
+                _feature = Feature(feature['tilted'], treenode['threshold'])
 
                 #gets rects from XML
                 rects = feature['rects']
@@ -60,7 +67,7 @@ def load_stages():
                 for rect in rects_list:
                     r = rect.split(' ')
                     #builds rect
-                    _rect = Rect(int(r[0]), int(r[1]), int(r[2]), int(r[3]), 0)
+                    _rect = Rect(int(r[0]), int(r[1]), int(r[2]), int(r[3]), int(float(r[4])))
                     #adds to feature
                     _feature.add_rect(_rect)
 
@@ -78,5 +85,3 @@ def load_stages():
         stage_list.append(_stage)
     return stage_list
 
-stages = load_stages()
-print(stages)
