@@ -9,7 +9,7 @@ import time
 
 def main():
     tic = time.perf_counter()
-    face_num = "9"
+    face_num = "1"
     face_link = "FaceExamples/test_" + face_num + ".png"
     img = Image(face_link)
 
