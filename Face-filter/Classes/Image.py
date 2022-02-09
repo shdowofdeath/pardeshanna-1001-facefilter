@@ -20,7 +20,7 @@ class Image:
         self.cache = 0
         self.whole_img = copy.deepcopy(self.data)
         #resize og image
-        dim = (450, 450)
+        dim = (400, 400)
         self.whole_img = cv2.resize(self.data, dim, interpolation=cv2.INTER_AREA)
         self.size = self.data.shape
         self.path = path = path
@@ -109,26 +109,26 @@ class Image:
         x = int(x)
         y = int(y)
         dimensions = self.whole_img.shape
-        height = self.whole_img.shape[0]
-        width = self.whole_img.shape[1]
-        area = height * width
-        mini_height = const_nums.ROWS
-        mini_width = const_nums.COLS
-        mini_area = mini_height * mini_width
+        height = self.whole_img.shape[0]#400
+        width = self.whole_img.shape[1]#400
+        area = height * width#160000
+        mini_height = const_nums.ROWS#40
+        mini_width = const_nums.COLS#40
+        mini_area = mini_height * mini_width#1600
 
-        relativity_x = int(width / mini_width)
-        relativity_y = int(height / mini_height)
-        x = x * relativity_x
-        y = y * relativity_y
+        relativity_x = int(width / mini_width)#10
+        relativity_y = int(height / mini_height)#10
+        x = x * relativity_x#80
+        y = y * relativity_y#50
 
-        width = 24 * relativity_x
-        height = 24 * relativity_y
+        width = 24 * relativity_x#240
+        height = 24 * relativity_y#240
 
-        start = (x, y)  # start of mini grid
-        end = (x + width + 20, y + height + 20)  # end of mini grid
+        start = (x, y)  # start of mini grid 80,50
+        end = (x + width + 20, y + height + 20) # end of mini grid (340,310)
         color = (51, 255, 51)
         thickness = 1
 
         cv2.rectangle(self.whole_img, start, end, color, thickness)
         cv2.imshow("Real Image", self.whole_img)
-        cv2.waitKey(300)
+        cv2.waitKey(0)
