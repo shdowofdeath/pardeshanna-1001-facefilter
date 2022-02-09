@@ -5,20 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Automation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/EdgeDetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants/const_nums.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const_nums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (135).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (138).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_38.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (143).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_39.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (163).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_43.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (165).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_44.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (170).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_45.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (177).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (183).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_47.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (184).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (186).JPG" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_49.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (187).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (193).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_51.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/1 (195).jpg" beforeDir="false" afterPath="$PROJECT_DIR$/FaceExamples/test_52.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -298,13 +284,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Source.py</url>
-          <line>57</line>
+          <line>58</line>
           <option name="timeStamp" value="105" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Automation.py</url>
           <line>19</line>
           <option name="timeStamp" value="106" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Automation.py</url>
+          <line>63</line>
+          <option name="timeStamp" value="107" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

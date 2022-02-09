@@ -54,18 +54,19 @@ def automation():
                 top_left = averages_grid[0:const_nums.MINI_FACE_LEN, 0:const_nums.MINI_FACE_LEN]
                 top_right = averages_grid[0:const_nums.MINI_FACE_LEN, const_nums.MINI_FACE_LEN:const_nums.FACE_LEN]
                 # bottom_left = averages_grid[120:240, 0:120]
-                # bottom_right = averages_grid[120:240, 120:240]
+                bottom = averages_grid[const_nums.MINI_FACE_LEN:const_nums.FACE_LEN, 0:const_nums.FACE_LEN]
 
                 top_left_index = most_populated_index(top_left)
                 top_right_index = most_populated_index(top_right)
-                # bottom_left_index = most_populated_index(bottom_left)
+                bottom_index = most_populated_index(bottom)
                 # bottom_right_index = most_populated_index(bottom_right)
 
                 averages_grid[top_left_index[0]][top_left_index[1]] = -10
                 averages_grid[top_right_index[0]][top_right_index[1] + const_nums.MINI_FACE_LEN] = -10
-                # averages_grid[bottom_left_index[0] + 120][bottom_left_index[1]] = -10
+                averages_grid[bottom_index[0] + const_nums.MINI_FACE_LEN][bottom_index[1]] = -10
                 # averages_grid[bottom_right_index[0] + 120][bottom_right_index[1] + 120] = -10
                 print_img(image, averages_grid, avrg_coords)
                 cv2.waitKey(300)
+    cv2.waitKey(0)
 
 automation()
