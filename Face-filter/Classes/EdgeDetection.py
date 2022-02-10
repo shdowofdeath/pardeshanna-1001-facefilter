@@ -145,4 +145,27 @@ def print_face(self, x, y):
     cv2.imshow("Real Image", self.whole_img)
     cv2.waitKey(0)
 
+def find_eye_coords(avrg_coords, pixels):
+    avrg_coords[0] += 4
+    avrg_coords[1] += 3
+    avrg_coords[0] = avrg_coords[0] * const_nums.RELATIVITY
+    avrg_coords[1] = avrg_coords[1] * const_nums.RELATIVITY
+    averages_grid = edge_detection(pixels[avrg_coords[0]:(avrg_coords[0] + const_nums.FACE_LEN),
+                                   avrg_coords[1]:(avrg_coords[1] + const_nums.FACE_LEN)])
+    top_left = averages_grid[0:const_nums.MINI_FACE_LEN, 0:const_nums.MINI_FACE_LEN]
+    top_right = averages_grid[0:const_nums.MINI_FACE_LEN, const_nums.MINI_FACE_LEN:const_nums.FACE_LEN]
+    # bottom_left = averages_grid[120:240, 0:120]
+    # bottom_right = averages_grid[120:240, 120:240]
 
+    bottom = averages_grid[const_nums.MINI_FACE_LEN:const_nums.FACE_LEN, 0:const_nums.FACE_LEN]
+
+    top_left_index = most_populated_index(top_left)
+    top_right_index = most_populated_index(top_right)
+    bottom_index = most_populated_index(bottom)
+
+    averages_grid[top_left_index[0]][top_left_index[1]] = -10
+    averages_grid[top_right_index[0]][top_right_index[1] + const_nums.MINI_FACE_LEN] = -10
+    averages_grid[bottom_index[0] + const_nums.MINI_FACE_LEN][bottom_index[1]] = -10
+    # averages_grid[bottom_right_index[0] + 120][bottom_right_index[1] + 120] = -10
+
+    return averages_grid, avrg_coords
