@@ -32,14 +32,14 @@ def img_to_array(img):
 def edge_check_horizontal(arr):
     for i in range(const_nums.FACE_LEN):
         for j in range(const_nums.FACE_LEN - 1):
-            if (abs(arr[i][j] - arr[i][j + 1]) > 0.1):
+            if (abs(arr[i][j] - arr[i][j + 1]) > 0.06):
                 arr[i][j] = -1
 
 
 def edge_check_vertical(arr):
     for i in range(const_nums.FACE_LEN - 1):
         for j in range(const_nums.FACE_LEN):
-            if ((arr[i][j] != -1 or arr[i + 1][j] != -1) and (abs(arr[i][j] - arr[i + 1][j]) > 0.1)):
+            if ((arr[i][j] != -1 or arr[i + 1][j] != -1) and (abs(arr[i][j] - arr[i + 1][j]) > 0.06)):
                 arr[i][j] = -1
 
 
@@ -107,7 +107,7 @@ def most_populated_index(arr):
 
 def friends_in_range(x,y,arr):
     counter = 0
-    f_range = 15
+    f_range = 10
     if (x - f_range >= 0) and (y - f_range >= 0) and (x + f_range <= const_nums.MINI_FACE_LEN) and (y + f_range <= const_nums.MINI_FACE_LEN):
         checking_arr = arr[x-f_range:x+f_range, y-f_range:y+f_range]
         for i in range(f_range * 2):

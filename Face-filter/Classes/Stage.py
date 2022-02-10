@@ -23,15 +23,12 @@ class Stage:
                 if node.feature.is_feature_existent(mini_grid, image, start_coords):
                     if node.right != 1:#stop traversing nodes add val to threshold
                         threshold += node.right
-                        #print("Curr stage threshold: ", threshold)
                         break
                 else:
                     if node.left != 1:#stop traversing nodes add val to threshold
                         threshold += node.left
-                        #print("Curr stage threshold: ", threshold)
                         break
-        #print("Stage threshold ", threshold)
-        #print("Wanted threshold ", self.threshold)
+
         if threshold >= self.threshold:
             return True
         else:

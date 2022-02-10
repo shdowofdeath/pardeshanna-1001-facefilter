@@ -29,8 +29,7 @@ class Feature:
             diff = rect1_value - rect2_value
         else: #rect 2 is the black
             diff = rect2_value - rect1_value
-        #print("Feature diff: ", diff)
-        #print("Feature threshold", self.threshold)
+
         if diff >= self.threshold:
             return True
         return False
@@ -41,8 +40,6 @@ class Feature:
         #if there are three => send two sets of rects to "is_diff" and return if there is a difference in BOTH
         #if there are three => send four sets of rects "is_diff" and return if there is a difference in ALL
         #we are not checking tilted rects or "one in one" rects for now
-
-        #image.draw_rects(self.rects, start_coords)
 
         if(not self.is_tilted):#handling not tilted
             if len(self.rects) == 2:
