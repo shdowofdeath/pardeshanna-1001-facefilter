@@ -32,14 +32,14 @@ def img_to_array(img):
 def edge_check_horizontal(arr):
     for i in range(const_nums.FACE_LEN):
         for j in range(const_nums.FACE_LEN - 1):
-            if (abs(arr[i][j] - arr[i][j + 1]) > 0.06):
+            if (abs(arr[i][j] - arr[i][j + 1]) > const_nums.EDGES):
                 arr[i][j] = -1
 
 
 def edge_check_vertical(arr):
     for i in range(const_nums.FACE_LEN - 1):
         for j in range(const_nums.FACE_LEN):
-            if ((arr[i][j] != -1 or arr[i + 1][j] != -1) and (abs(arr[i][j] - arr[i + 1][j]) > 0.06)):
+            if ((arr[i][j] != -1 or arr[i + 1][j] != -1) and (abs(arr[i][j] - arr[i + 1][j]) > const_nums.EDGES)):
                 arr[i][j] = -1
 
 
@@ -86,18 +86,29 @@ def edge_detection(pixels):
 
 def print_img(img, averages_grid, start_coords):
     cv2.imshow("Before: ", img)
+    #img = draw_outline(start_coords, averages_grid, img, -1, 0)
+    cv2.rectangle(img, (start_coords[1], start_coords[0]), (start_coords[1] + const_nums.FACE_LEN, start_coords[0] + const_nums.FACE_LEN), (51, 255, 51), 1)
+    return img
+    #cv2.imshow("After: ", img)
+
+def print_img_aut(img, averages_grid, start_coords):
+    cv2.imshow("Before: ", img)
     img = draw_outline(start_coords, averages_grid, img, -1, 0)
     cv2.rectangle(img, (start_coords[1], start_coords[0]), (start_coords[1] + const_nums.FACE_LEN, start_coords[0] + const_nums.FACE_LEN), (51, 255, 51), 1)
     cv2.imshow("After: ", img)
 
 
-def most_populated_index(arr):
+def most_populated_index(arr, part):
 
     index = [0, 0, 0]
     for i in range(const_nums.MINI_FACE_LEN):
         for j in range(const_nums.MINI_FACE_LEN):
             if(arr[j][i] == -1):
-                friends_in_rng = friends_in_range(j,i, arr)
+                if(part == 1):#eyes
+                    friends_in_rng = friends_in_range(j,i, arr)
+                elif(part == 2):#mouth
+                    friends_in_rng = friends_in_range_mouth(j, i, arr)
+
                 if(friends_in_rng > index[2]):
                     index[1] = i
                     index[0] = j
@@ -107,13 +118,27 @@ def most_populated_index(arr):
 
 def friends_in_range(x,y,arr):
     counter = 0
-    f_range = 10
+    f_range = const_nums.RANGE
     if (x - f_range >= 0) and (y - f_range >= 0) and (x + f_range <= const_nums.MINI_FACE_LEN) and (y + f_range <= const_nums.MINI_FACE_LEN):
         checking_arr = arr[x-f_range:x+f_range, y-f_range:y+f_range]
         for i in range(f_range * 2):
             for j in range(f_range * 2):
                 if(checking_arr[j][i] == -1):
                     counter = counter + 1
+    return counter
+
+
+def friends_in_range_mouth(x,y,arr):
+    counter = 0
+    vertical_range = const_nums.VERT_RANGE
+    horizontal_range = const_nums.HORIZ_RANGE
+    if (x - horizontal_range >= 0) and (y - vertical_range >= 0) and (x + horizontal_range <= const_nums.MINI_FACE_LEN) and (y + vertical_range <= const_nums.MINI_FACE_LEN):
+        checking_arr = arr[x-horizontal_range:x+horizontal_range, y-vertical_range:y+vertical_range]
+        for i in range(vertical_range * 2):
+            for j in range(horizontal_range * 2):
+                if(checking_arr[j][i] == -1):
+                    counter = counter + 1
+    #print("MOUTH")
     return counter
 
 
@@ -159,9 +184,9 @@ def find_eye_coords(avrg_coords, pixels):
 
     bottom = averages_grid[const_nums.MINI_FACE_LEN:const_nums.FACE_LEN, 0:const_nums.FACE_LEN]
 
-    top_left_index = most_populated_index(top_left)
-    top_right_index = most_populated_index(top_right)
-    bottom_index = most_populated_index(bottom)
+    top_left_index = most_populated_index(top_left, 1)
+    top_right_index = most_populated_index(top_right, 1)
+    bottom_index = most_populated_index(bottom, 2)
 
     averages_grid[top_left_index[0]][top_left_index[1]] = -10
     averages_grid[top_right_index[0]][top_right_index[1] + const_nums.MINI_FACE_LEN] = -10

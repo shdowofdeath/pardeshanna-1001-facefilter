@@ -1,5 +1,4 @@
 import copy
-
 from Classes.Image import *
 from Classes.EdgeDetection import *
 from Classes.ClassifierCascade import *
@@ -7,14 +6,14 @@ from Parser.parser import load_stages
 from Constants import const_nums
 import time
 
-def main():
+def main(data):
     #Calls Image Ctor
-    face_num = "30"
-    face_link = "FaceExamples/test_" + face_num + ".png"
-    img = Image(face_link)
-
+    # face_num = "1"
+    # face_link = "FaceExamples/test_" + face_num + ".png"
+    img = Image(data)
+    #print(img.data)
     #sets image for edge detection
-    test = read_image(face_link)
+    test = data
     image = resize_img(test, const_nums.WIDTH, const_nums.LENGTH)
     imgGray = greyscale(image)
     pixels = img_to_array(imgGray)
@@ -33,8 +32,7 @@ def main():
 
     if(is_face):
         averages_grid, avrg_coords = find_eye_coords(avrg_coords, pixels)
-        print_img(image, averages_grid, avrg_coords)
-        cv2.waitKey(0)
+        return print_img(image, averages_grid, avrg_coords)
     else:
         print("Face was not found")
 

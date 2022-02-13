@@ -12,18 +12,19 @@ Contains the Integral image feature which optimizes the algorithim
 """
 
 class Image:
-    def __init__(self, path):
-        if(isinstance(path, str)):
-            self.data = cv2.imread(path)#sets the image data from the path
-        else:
-            self.data = path
+    def __init__(self, data):
+        # if(isinstance(path, str)):
+        #     self.data = cv2.imread(path)#sets the image data from the path
+        # else:
+        #     self.data = path
+        self.data = data
         self.cache = 0
         self.whole_img = copy.deepcopy(self.data)
         #resize og image
         dim = (400, 400)
         self.whole_img = cv2.resize(self.data, dim, interpolation=cv2.INTER_AREA)
         self.size = self.data.shape
-        self.path = path = path
+        #self.path = path = path
         self.arr = [[]]
 
     def img_to_array(self):
@@ -92,18 +93,6 @@ class Image:
         cv2.imshow("GreyScale: ", self.data)
         self.data = copy.deepcopy(self.cache)
         cv2.waitKey(1)
-
-    # def print_stage_num(self, stage_num):
-    #     org = (50, 50)
-    #     font = cv2.FONT_HERSHEY_SIMPLEX
-    #     color = (255,255,255)
-    #     thickness = 2
-    #     fontScale = 1
-    #     self.data = copy.deepcopy(self.cache)
-    #     cv2.putText(self.data, 'Stage: ' + str(stage_num), org, font, fontScale, color, thickness, cv2.LINE_AA)
-    #     cv2.imshow("Stage num", self.data)
-    #     self.data = copy.deepcopy(self.cache)
-    #     cv2.waitKey(0)
 
     def print_og_image_face(self, x, y):
         x = int(x)

@@ -5,6 +5,13 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Automation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/EdgeDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Image.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Constants/const_nums.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const_nums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceExamples/test_11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceExamples/test_12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceExamples/test_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceExamples/test_38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FaceExamples/test_9.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +87,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FaceFilterMagsh" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -178,19 +185,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="parser (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="StreamLit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Face-filter" />
-      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_OPTIONS" value="-m streamlit run" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Parser" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Parser/parser.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/StreamLit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -201,18 +208,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.ClassifierCascade" />
-      <item itemvalue="Python.parser (1)" />
       <item itemvalue="Python.Source" />
       <item itemvalue="Python.Automation" />
       <item itemvalue="Python.Stream" />
+      <item itemvalue="Python.StreamLit" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Automation" />
+        <item itemvalue="Python.StreamLit" />
         <item itemvalue="Python.Source" />
         <item itemvalue="Python.ClassifierCascade" />
         <item itemvalue="Python.Stream" />
-        <item itemvalue="Python.parser (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -274,7 +281,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Classes/Image.py</url>
-          <line>113</line>
+          <line>102</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -283,19 +290,29 @@
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Source.py</url>
-          <line>58</line>
-          <option name="timeStamp" value="105" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Automation.py</url>
-          <line>19</line>
+          <line>21</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Automation.py</url>
-          <line>63</line>
+          <line>64</line>
           <option name="timeStamp" value="107" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Source.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="108" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Classes/Image.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/StreamLit.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="110" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

@@ -16,9 +16,10 @@ def automation():
     for filename in os.listdir(directory):
         if (filename.endswith(".png") or filename.endswith(".jpg")) and ("test" in filename or '1' in filename) and  "bad" not in filename:
             tic = time.perf_counter()
-            face_link = "FaceExamples/" + filename
-            img = Image(face_link)
 
+            face_link = "FaceExamples/" + filename
+            data = cv2.imread(face_link)
+            img = Image(data)
             # sets image for edge detection
             test = read_image(face_link)
             image = resize_img(test, const_nums.WIDTH, const_nums.LENGTH)
@@ -56,16 +57,18 @@ def automation():
                 # bottom_left = averages_grid[120:240, 0:120]
                 bottom = averages_grid[const_nums.MINI_FACE_LEN:const_nums.FACE_LEN, 0:const_nums.FACE_LEN]
 
-                top_left_index = most_populated_index(top_left)
-                top_right_index = most_populated_index(top_right)
-                bottom_index = most_populated_index(bottom)
+                top_left_index = most_populated_index(top_left, 1)
+                top_right_index = most_populated_index(top_right, 1)
+                bottom_index = most_populated_index(bottom, 2)
                 # bottom_right_index = most_populated_index(bottom_right)
 
                 averages_grid[top_left_index[0]][top_left_index[1]] = -10
                 averages_grid[top_right_index[0]][top_right_index[1] + const_nums.MINI_FACE_LEN] = -10
                 averages_grid[bottom_index[0] + const_nums.MINI_FACE_LEN][bottom_index[1]] = -10
                 # averages_grid[bottom_right_index[0] + 120][bottom_right_index[1] + 120] = -10
-                print_img(image, averages_grid, avrg_coords)
+                print(face_link)
+                print_img_aut(image, averages_grid, avrg_coords)
+
                 cv2.waitKey(300)
     cv2.waitKey(0)
 
