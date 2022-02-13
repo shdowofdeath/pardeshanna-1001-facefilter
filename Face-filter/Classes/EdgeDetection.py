@@ -52,10 +52,9 @@ def draw_outline(start_coords, grid, img, marker, color):
     for i in range(const_nums.FACE_LEN):
         for j in range(const_nums.FACE_LEN):
             if (grid[i][j] == marker):
-                img = draw_line(img, j + start_coords[1], i + start_coords[0], j + start_coords[1], i + start_coords[0],
-                                color)
+                 img = draw_line(img, j + start_coords[1], i + start_coords[0], j + start_coords[1], i + start_coords[0], color)
             if(grid[i][j] == -10):
-                cv2.line(img, (j + start_coords[1], i + start_coords[0]), (j + start_coords[1], i + start_coords[0]), (0, 255, 128), 8)
+                cv2.line(img, (j + start_coords[1], i + start_coords[0]), (j + start_coords[1], i + start_coords[0]), (0, 255, 128), 10)
     return img
 
 
@@ -86,7 +85,7 @@ def edge_detection(pixels):
 
 def print_img(img, averages_grid, start_coords):
     cv2.imshow("Before: ", img)
-    #img = draw_outline(start_coords, averages_grid, img, -1, 0)
+    img = draw_outline(start_coords, averages_grid, img, -1, 0)
     cv2.rectangle(img, (start_coords[1], start_coords[0]), (start_coords[1] + const_nums.FACE_LEN, start_coords[0] + const_nums.FACE_LEN), (51, 255, 51), 1)
     return img
     #cv2.imshow("After: ", img)

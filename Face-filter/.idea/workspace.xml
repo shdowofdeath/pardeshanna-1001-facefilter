@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automation.py" beforeDir="false" afterPath="$PROJECT_DIR$/Automation.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classes/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/EdgeDetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Image.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Image.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants/const_nums.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const_nums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamLit.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamLit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +92,7 @@
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\Parser" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Automation">
+  <component name="RunManager" selected="Python.StreamLit">
     <configuration name="Automation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Face-filter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -215,8 +207,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Automation" />
         <item itemvalue="Python.StreamLit" />
+        <item itemvalue="Python.Automation" />
         <item itemvalue="Python.Source" />
         <item itemvalue="Python.ClassifierCascade" />
         <item itemvalue="Python.Stream" />
@@ -276,7 +268,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Classes/EdgeDetection.py</url>
-          <line>58</line>
+          <line>57</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -286,7 +278,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Classes/EdgeDetection.py</url>
-          <line>88</line>
+          <line>87</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -308,11 +300,6 @@
           <url>file://$PROJECT_DIR$/Classes/Image.py</url>
           <line>18</line>
           <option name="timeStamp" value="109" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/StreamLit.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="110" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
