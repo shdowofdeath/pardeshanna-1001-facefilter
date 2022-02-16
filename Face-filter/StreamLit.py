@@ -10,12 +10,12 @@ picture = st.checkbox("Take Picture")
 upload_image = st.checkbox("Upload Image")
 range = st.slider('Range', 1, 30)
 edges = st.slider('Edges', 0.01, 0.5)
-vert_range = st.slider('Vertical Range', 1, 30)
-horiz_range = st.slider('Horizontal Range', 1, 30)
+vert_range = st.slider('Vertical Range', 1, 60)
+horiz_range = st.slider('Horizontal Range', 1, 60)
 const_nums.RANGE = range
 const_nums.EDGES = edges
-VERT_RANGE = vert_range
-HORIZ_RANGE = horiz_range
+const_nums.VERT_RANGE = vert_range
+const_nums.HORIZ_RANGE = horiz_range
 if(picture):
     file_uploaded = st.camera_input("Camera")
 

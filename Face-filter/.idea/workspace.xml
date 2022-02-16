@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/EdgeDetection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Constants/const_nums.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const_nums.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/StreamLit.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamLit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +92,7 @@
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\Parser" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.StreamLit">
+  <component name="RunManager" selected="Python.Automation">
     <configuration name="Automation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Face-filter" />
       <option name="INTERPRETER_OPTIONS" value="" />
