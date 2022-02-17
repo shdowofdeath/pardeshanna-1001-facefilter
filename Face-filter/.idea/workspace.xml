@@ -4,7 +4,6 @@
     <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Constants/const_nums.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const_nums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamLit.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamLit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,8 +206,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.StreamLit" />
         <item itemvalue="Python.Automation" />
+        <item itemvalue="Python.StreamLit" />
         <item itemvalue="Python.Source" />
         <item itemvalue="Python.ClassifierCascade" />
         <item itemvalue="Python.Stream" />
