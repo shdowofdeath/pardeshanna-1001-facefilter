@@ -32,24 +32,24 @@ class Glasses(Filter):
         Filter.__init__(self, filterImage, img, name)
         self.filterImage = self.filterImage.resize((170, 60))
 
-    def fixate_glasses(self):
+    def fixate(self):
         self.coords[0] -= (self.filterImage.width) // 2
         self.coords[1] -= 10
 
 class Lips(Filter):
     def __init__(self, filterImage, img, name):
         Filter.__init__(self, filterImage, img, name)
-        self.filterImage = self.filterImage.resize((100, 60))
+        self.filterImage = self.filterImage.resize((110, 60))
 
-    def fixate_lips(self):
-        self.coords[0] -= 20#(self.coords[0].filterImage.width) // 2
+    def fixate(self):
+        self.coords[0] -= 25#(self.coords[0].filterImage.width) // 2
         self.coords[1] -= 20#10
 
 class Hat(Filter):
     def __init__(self, filterImage, img, name):
         Filter.__init__(self, filterImage, img, name)
 
-    def fixate_hat(self):
+    def fixate(self):
         self.coords[0] -= 60#(self.coords[0].filterImage.width) // 2
         self.coords[1] -= 90#10
         self.filterImage = self.filterImage.resize((100, 100))
