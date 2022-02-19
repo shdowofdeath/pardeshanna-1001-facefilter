@@ -85,7 +85,7 @@ def edge_detection(pixels):
 
 def print_img(img, averages_grid, start_coords):
     cv2.imshow("Before: ", img)
-    img = draw_outline(start_coords, averages_grid, img, -1, 0)
+    #img = draw_outline(start_coords, averages_grid, img, -1, 0)
     cv2.rectangle(img, (start_coords[1], start_coords[0]), (start_coords[1] + const_nums.FACE_LEN, start_coords[0] + const_nums.FACE_LEN), (51, 255, 51), 1)
     return img
     #cv2.imshow("After: ", img)
@@ -170,6 +170,7 @@ def print_face(self, x, y):
     cv2.waitKey(0)
 
 def find_eye_coords(avrg_coords, pixels):
+    facial_coords = []
     avrg_coords[0] += 4
     avrg_coords[1] += 3
     avrg_coords[0] = avrg_coords[0] * const_nums.RELATIVITY
@@ -186,10 +187,20 @@ def find_eye_coords(avrg_coords, pixels):
     top_left_index = most_populated_index(top_left, 1)
     top_right_index = most_populated_index(top_right, 1)
     bottom_index = most_populated_index(bottom, 2)
-
+    # print("LEFT: ", top_left_index)
+    # print("RIGHT: ", top_right_index)
+    # print("bottom: ", bottom_index)
     averages_grid[top_left_index[0]][top_left_index[1]] = -10
     averages_grid[top_right_index[0]][top_right_index[1] + const_nums.MINI_FACE_LEN] = -10
     averages_grid[bottom_index[0] + const_nums.MINI_FACE_LEN][bottom_index[1]] = -10
     # averages_grid[bottom_right_index[0] + 120][bottom_right_index[1] + 120] = -10
-
-    return averages_grid, avrg_coords
+    facial_coords.append((top_left_index[1] + avrg_coords[1], top_left_index[0] + avrg_coords[0]))
+    facial_coords.append((top_right_index[1] + avrg_coords[1] + const_nums.MINI_FACE_LEN, top_right_index[0] + avrg_coords[0]))
+    facial_coords.append((bottom_index[1] + avrg_coords[1], bottom_index[0] + avrg_coords[0] + const_nums.MINI_FACE_LEN))
+    facial_coords.append(((facial_coords[0][0] + facial_coords[1][0])//2, (facial_coords[0][1] + facial_coords[1][1])//2))
+    facial_coords.append((avrg_coords[1] + 100, avrg_coords[0]))
+    print("LEFT: ", facial_coords[0])
+    print("RIGHT: ", facial_coords[1])
+    print("bottom: ", facial_coords[2])
+    print("Avg: ", facial_coords[3])
+    return facial_coords

@@ -8,14 +8,14 @@ from PIL import Image as Im
 
 picture = st.checkbox("Take Picture")
 upload_image = st.checkbox("Upload Image")
-range = st.slider('Range', 1, 30)
-edges = st.slider('Edges', 0.01, 0.5)
-vert_range = st.slider('Vertical Range', 1, 60)
-horiz_range = st.slider('Horizontal Range', 1, 60)
-const_nums.RANGE = range
-const_nums.EDGES = edges
-const_nums.VERT_RANGE = vert_range
-const_nums.HORIZ_RANGE = horiz_range
+# range = st.slider('Range', 1, 30)
+# edges = st.slider('Edges', 0.01, 0.5)
+# vert_range = st.slider('Vertical Range', 1, 60)
+# horiz_range = st.slider('Horizontal Range', 1, 60)
+# const_nums.RANGE = range
+# const_nums.EDGES = edges
+# const_nums.VERT_RANGE = vert_range
+# const_nums.HORIZ_RANGE = horiz_range
 if(picture):
     file_uploaded = st.camera_input("Camera")
 
@@ -24,7 +24,7 @@ if(picture):
         st.image(image_file)
         # image_np = np.ndarray(image_file)
         # print(image_file)
-        image_file = Im.open(file_uploaded)
+        image_file = Im.open(file_uploaded).convert("RGBA")
         data = asarray(image_file)
         final_image = Source.main(data)
         butt = st.button("Detect Face")
@@ -39,8 +39,9 @@ elif(upload_image):
         # image_np = np.ndarray(image_file)
         # print(image_file)
         image_file = Im.open(file_uploaded)
-        data = asarray(image_file)
-        final_image = Source.main(data)
+        resized_img = image_file.resize((400, 400))
+        data = asarray(resized_img)
+        final_image = Source.main(data, resized_img)
         # butt = st.button("Detect Face")
         # if (butt):
         st.image(final_image)

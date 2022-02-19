@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/ClassifierCascade.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/ClassifierCascade.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/EdgeDetection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Constants/const_nums.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const_nums.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/StreamLit.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamLit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,20 +82,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Filters" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\משתמש\Documents\Proj\pardeshanna-1001-facefilter\Face-filter\Filters" />
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\FaceExamples" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\משתמש\Documents\Proj\pardeshanna-1001-facefilter\Face-filter" />
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\FaceExamples" />
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\test_50" />
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\Parser" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Automation">
+  <component name="RunManager" selected="Python.StreamLit">
     <configuration name="Automation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Face-filter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -206,8 +212,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Automation" />
         <item itemvalue="Python.StreamLit" />
+        <item itemvalue="Python.Automation" />
         <item itemvalue="Python.Source" />
         <item itemvalue="Python.ClassifierCascade" />
         <item itemvalue="Python.Stream" />
@@ -266,11 +272,6 @@
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/EdgeDetection.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="98" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Classes/Image.py</url>
           <line>102</line>
           <option name="timeStamp" value="99" />
@@ -281,24 +282,19 @@
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Automation.py</url>
-          <line>21</line>
-          <option name="timeStamp" value="106" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Automation.py</url>
-          <line>64</line>
-          <option name="timeStamp" value="107" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Source.py</url>
-          <line>34</line>
-          <option name="timeStamp" value="108" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Classes/Image.py</url>
           <line>18</line>
           <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Source.py</url>
+          <line>35</line>
+          <option name="timeStamp" value="112" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Classes/EdgeDetection.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="117" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

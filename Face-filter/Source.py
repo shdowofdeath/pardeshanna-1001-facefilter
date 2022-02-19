@@ -1,12 +1,6 @@
-import copy
-from Classes.Image import *
-from Classes.EdgeDetection import *
-from Classes.ClassifierCascade import *
-from Parser.parser import load_stages
-from Constants import const_nums
-import time
+from Classes.Filter import *
 
-def main(data):
+def main(data, image_file):
     #Calls Image Ctor
     # face_num = "1"
     # face_link = "FaceExamples/test_" + face_num + ".png"
@@ -31,8 +25,15 @@ def main(data):
     is_face, avrg_coords = cascade.detect_face(img)
 
     if(is_face):
-        averages_grid, avrg_coords = find_eye_coords(avrg_coords, pixels)
-        return print_img(image, averages_grid, avrg_coords)
+        facial_coords = find_eye_coords(avrg_coords, pixels)
+        #img = print_img(image, averages_grid, avrg_coords)
+        filters = filterCreator(image_file)
+        filters[1].coords[0] = facial_coords[2][0]
+        filters[1].coords[1] = facial_coords[2][1]
+        filters[1].fixate_lips()
+        filters[1].paste_filter()
+
+        return filters[1].image_after_filter
     else:
         print("Face was not found")
 

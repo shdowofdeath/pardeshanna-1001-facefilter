@@ -20,7 +20,7 @@ class ClassifierCascade:
         counter = 0
         is_face = False
         faces_list = []
-
+        avrg_coords = [0, 0]
         start_coords = [0, 0]
         for col in range(const_nums.COLS - const_nums.MINI_GRID_SIZE):
             for row in range(const_nums.ROWS - const_nums.MINI_GRID_SIZE):
