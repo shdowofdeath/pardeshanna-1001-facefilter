@@ -50,8 +50,8 @@ class Hat(Filter):
         Filter.__init__(self, filterImage, img, name)
 
     def fixate(self):
-        self.coords[0] -= 60#(self.coords[0].filterImage.width) // 2
-        self.coords[1] -= 90#10
+        self.coords[0] -= 70#(self.coords[0].filterImage.width) // 2
+        self.coords[1] -= 130#10
         self.filterImage = self.filterImage.resize((100, 100))
 
 def filterCreator(img):
