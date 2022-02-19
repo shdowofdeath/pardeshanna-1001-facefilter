@@ -34,7 +34,7 @@ class Glasses(Filter):
 
     def fixate(self):
         self.coords[0] -= (self.filterImage.width) // 2
-        self.coords[1] -= 10
+        self.coords[1] -= 20
 
 class Lips(Filter):
     def __init__(self, filterImage, img, name):
