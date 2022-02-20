@@ -42,7 +42,7 @@ class Lips(Filter):
         self.filterImage = self.filterImage.resize((110, 60))
 
     def fixate(self):
-        self.coords[0] -= 25#(self.coords[0].filterImage.width) // 2
+        self.coords[0] -= 20#(self.coords[0].filterImage.width) // 2
         self.coords[1] -= 20#10
 
 class Hat(Filter):

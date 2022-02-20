@@ -190,9 +190,9 @@ def find_eye_coords(avrg_coords, pixels):
     # print("LEFT: ", top_left_index)
     # print("RIGHT: ", top_right_index)
     # print("bottom: ", bottom_index)
-    averages_grid[top_left_index[0]][top_left_index[1]] = -10
-    averages_grid[top_right_index[0]][top_right_index[1] + const_nums.MINI_FACE_LEN] = -10
-    averages_grid[bottom_index[0] + const_nums.MINI_FACE_LEN][bottom_index[1]] = -10
+    averages_grid[top_left_index[0]][top_left_index[1]] = -10#left eye
+    averages_grid[top_right_index[0]][top_right_index[1] + const_nums.MINI_FACE_LEN] = -10#right eye
+    averages_grid[bottom_index[0] + const_nums.MINI_FACE_LEN][bottom_index[1]] = -10#mouth
     # averages_grid[bottom_right_index[0] + 120][bottom_right_index[1] + 120] = -10
     facial_coords.append((top_left_index[1] + avrg_coords[1], top_left_index[0] + avrg_coords[0]))
     facial_coords.append((top_right_index[1] + avrg_coords[1] + const_nums.MINI_FACE_LEN, top_right_index[0] + avrg_coords[0]))

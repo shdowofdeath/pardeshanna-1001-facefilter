@@ -28,8 +28,20 @@ def main(data, image_file):
         facial_coords = find_eye_coords(avrg_coords, pixels)
         #img = print_img(image, averages_grid, avrg_coords)
         filters = filterCreator(image_file)
+        filters[2].coords[0] = facial_coords[4][0]
+        filters[2].coords[1] = facial_coords[4][1]
+        filters[2].fixate()
+        filters[2].paste_filter()
+
+        filters[0].coords[0] = facial_coords[3][0]
+        filters[0].coords[1] = facial_coords[3][1]
+        filters[0].img = filters[2].image_after_filter
+        filters[0].fixate()
+        filters[0].paste_filter()
+
         filters[1].coords[0] = facial_coords[2][0]
         filters[1].coords[1] = facial_coords[2][1]
+        filters[1].img = filters[0].image_after_filter
         filters[1].fixate()
         filters[1].paste_filter()
 
