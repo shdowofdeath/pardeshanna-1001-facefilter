@@ -13,10 +13,6 @@ Contains the Integral image feature which optimizes the algorithim
 
 class Image:
     def __init__(self, data):
-        # if(isinstance(path, str)):
-        #     self.data = cv2.imread(path)#sets the image data from the path
-        # else:
-        #     self.data = path
         self.data = data
         self.cache = 0
         self.whole_img = copy.deepcopy(self.data)

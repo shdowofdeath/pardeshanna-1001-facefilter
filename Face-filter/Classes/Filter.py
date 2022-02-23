@@ -18,10 +18,13 @@ class Filter:
     def resize(self, width, height):
         self.filterImage = self.filterImage.resize((70, 20))
 
+    """
+    takes the image and pastes the filter image on top of it
+    saves the new filtered image as the image
+    """
     def paste_filter(self):
         background = copy.copy(self.img)
         foreground = copy.copy(self.filterImage)
-        #alpha = foreground.convert('RGBA')
         print(self.coords[0], self.coords[1])
         background.paste(foreground, (self.coords[0], self.coords[1]), foreground)
         self.image_after_filter = background
