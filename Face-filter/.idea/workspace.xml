@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/EdgeDetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +92,7 @@
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\Parser" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.StreamLit">
+  <component name="RunManager" selected="Python.ClassifierCascade">
     <configuration name="Automation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Face-filter" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -207,15 +205,6 @@
       <item itemvalue="Python.Stream" />
       <item itemvalue="Python.StreamLit" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.StreamLit" />
-        <item itemvalue="Python.Automation" />
-        <item itemvalue="Python.Source" />
-        <item itemvalue="Python.ClassifierCascade" />
-        <item itemvalue="Python.Stream" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -261,47 +250,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Stream.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/Image.py</url>
-          <line>102</line>
-          <option name="timeStamp" value="99" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/EdgeDetection.py</url>
-          <line>87</line>
-          <option name="timeStamp" value="100" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/Image.py</url>
-          <line>18</line>
-          <option name="timeStamp" value="109" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Source.py</url>
-          <line>47</line>
-          <option name="timeStamp" value="112" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Classes/EdgeDetection.py</url>
-          <line>94</line>
-          <option name="timeStamp" value="117" />
-        </line-breakpoint>
-      </breakpoints>
-      <default-breakpoints>
-        <breakpoint type="python-exception">
-          <properties notifyOnTerminate="true" exception="BaseException">
-            <option name="notifyOnTerminate" value="true" />
-          </properties>
-        </breakpoint>
-      </default-breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
         <watch expression="stages[6]" />
