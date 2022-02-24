@@ -14,7 +14,7 @@ def add_filter(image, filters,facial_coords, index, is_add_filter):
     return filters[index].image_after_filter
 
 
-def main(data, image_file, filters_arr):
+def main(data, image_file, filters_arr, choice):
 
     print(filters_arr)
 
@@ -40,15 +40,22 @@ def main(data, image_file, filters_arr):
     is_face, avrg_coords = cascade.detect_face(img)
 
     if(is_face):#if face was found
-        facial_coords = find_eye_coords(avrg_coords, pixels)
 
-        filters = filterCreator(image_file)
+        if(choice == 0):
+            averages_grid = find_eye_coords(avrg_coords, pixels, 0)
+            final_img = print_img_aut(image, averages_grid, avrg_coords)
+            return final_img
 
-        filters[0].image_after_filter = add_filter(image_file, filters, facial_coords, 0, filters_arr[0])#glasses
-        filters[1].image_after_filter = add_filter(filters[0].image_after_filter, filters, facial_coords, 1, filters_arr[1])#lips
-        filters[2].image_after_filter = add_filter(filters[1].image_after_filter, filters, facial_coords, 2, filters_arr[2])#hat
+        elif(choice == 1):
+            facial_coords = find_eye_coords(avrg_coords, pixels, 1)
 
-        return filters[2].image_after_filter
+            filters = filterCreator(image_file)
+
+            filters[0].image_after_filter = add_filter(image_file, filters, facial_coords, 0, filters_arr[0])#glasses
+            filters[1].image_after_filter = add_filter(filters[0].image_after_filter, filters, facial_coords, 1, filters_arr[1])#lips
+            filters[2].image_after_filter = add_filter(filters[1].image_after_filter, filters, facial_coords, 2, filters_arr[2])#hat
+
+            return filters[2].image_after_filter
 
     else:
         print("Face was not found")

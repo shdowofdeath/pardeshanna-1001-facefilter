@@ -33,31 +33,45 @@ if(picture):
 
 elif(upload_image):
 
-    st.write("\nChoose which filters you want")
-    glasses_label = st.checkbox("Glasses")
-    hat_label = st.checkbox("Hat")
-    lips_label = st.checkbox("lips")
+    st.write("\nChoose:")
+    edge_check = st.checkbox("Edge Detection")
+    filters_check = st.checkbox("Filters")
 
-    filters = [False]*3 #filters list. 0-glasses, 1-hat, 2-lips
+    if(edge_check):
+        file_uploaded = st.file_uploader("Upload your file PLEASE")
+        filters = []
 
-    if(glasses_label):
-        filters[0] = True
-    if (lips_label):
-        filters[1] = True
-    if (hat_label):
-        filters[2] = True
+        if (file_uploaded is not None):
+            image_file = file_uploaded.read()
+            st.image(image_file)
+            image_file = Im.open(file_uploaded)
+            resized_img = image_file.resize((400, 400))
+            data = asarray(resized_img)
+            final_image = Source.main(data, resized_img, filters, 0)
+            st.image(final_image)
 
-    file_uploaded = st.file_uploader("Upload your file PLEASE")
+    elif(filters_check):
+        st.write("\nChoose which filters you want")
+        glasses_label = st.checkbox("Glasses")
+        hat_label = st.checkbox("Hat")
+        lips_label = st.checkbox("lips")
 
-    if (file_uploaded is not None):
-        image_file = file_uploaded.read()
-        st.image(image_file)
-        # image_np = np.ndarray(image_file)
-        # print(image_file)
-        image_file = Im.open(file_uploaded)
-        resized_img = image_file.resize((400, 400))
-        data = asarray(resized_img)
-        final_image = Source.main(data, resized_img, filters)
-        # butt = st.button("Detect Face")
-        # if (butt):
-        st.image(final_image)
+        filters = [False]*3 #filters list. 0-glasses, 1-hat, 2-lips
+
+        if(glasses_label):
+            filters[0] = True
+        if (lips_label):
+            filters[1] = True
+        if (hat_label):
+            filters[2] = True
+
+        file_uploaded = st.file_uploader("Upload your file PLEASE")
+
+        if (file_uploaded is not None):
+            image_file = file_uploaded.read()
+            st.image(image_file)
+            image_file = Im.open(file_uploaded)
+            resized_img = image_file.resize((400, 400))
+            data = asarray(resized_img)
+            final_image = Source.main(data, resized_img, filters, 1)
+            st.image(final_image)

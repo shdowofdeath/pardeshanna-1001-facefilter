@@ -78,11 +78,9 @@ def edge_detection(pixels):
 
 def print_img_aut(img, averages_grid, start_coords):
     #This is a function for the Automation that prints out the image
-    cv2.imshow("Before: ", img)
     img = draw_outline(start_coords, averages_grid, img, -1, 0)
     cv2.rectangle(img, (start_coords[1], start_coords[0]), (start_coords[1] + const_nums.FACE_LEN, start_coords[0] + const_nums.FACE_LEN), (51, 255, 51), 1)
-    cv2.imshow("After: ", img)
-
+    return img
 
 def most_populated_index(arr, part):
     '''
@@ -166,7 +164,7 @@ def create_filter_coords(left, right, bottom, avrg_coords):
     facial_coords.append((avrg_coords[1] + 100, avrg_coords[0]))#Head
 
     return facial_coords
-def find_eye_coords(avrg_coords, pixels):
+def find_eye_coords(avrg_coords, pixels, choice):
     facial_coords = []
     avrg_coords = fixate_coords(avrg_coords)
 
@@ -178,8 +176,10 @@ def find_eye_coords(avrg_coords, pixels):
     top_right_index = most_populated_index(top_right, 1)#Finds right eye coords
     bottom_index = most_populated_index(bottom, 2)#finds mouth coords
 
-    #averages_grid = mark_facial_features(averages_grid, top_left_index, top_right_index, bottom_index)
+    if(choice == 0):#edge detection
+        averages_grid = mark_facial_features(averages_grid, top_left_index, top_right_index, bottom_index)
+        return averages_grid
 
-    facial_coords = create_filter_coords(top_left_index, top_right_index, bottom_index, avrg_coords)
-
-    return facial_coords
+    if(choice == 1):#filters
+        facial_coords = create_filter_coords(top_left_index, top_right_index, bottom_index, avrg_coords)
+        return facial_coords
