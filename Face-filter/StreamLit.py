@@ -2,28 +2,17 @@ import streamlit as st
 
 import Source
 from Source import *
-#from numpy import asarray
 from PIL import Image as Im
-
 
 picture = st.checkbox("Take Picture")
 upload_image = st.checkbox("Upload Image")
-# range = st.slider('Range', 1, 30)
-# edges = st.slider('Edges', 0.01, 0.5)
-# vert_range = st.slider('Vertical Range', 1, 60)
-# horiz_range = st.slider('Horizontal Range', 1, 60)
-# const_nums.RANGE = range
-# const_nums.EDGES = edges
-# const_nums.VERT_RANGE = vert_range
-# const_nums.HORIZ_RANGE = horiz_range
+
 if(picture):
     file_uploaded = st.camera_input("Camera")
 
     if (file_uploaded is not None):
         image_file = file_uploaded.read()
         st.image(image_file)
-        # image_np = np.ndarray(image_file)
-        # print(image_file)
         image_file = Im.open(file_uploaded).convert("RGBA")
         data = asarray(image_file)
         final_image = Source.main(data)
@@ -33,11 +22,9 @@ if(picture):
 
 elif(upload_image):
 
-    st.write("\nChoose:")
-    edge_check = st.checkbox("Edge Detection")
-    filters_check = st.checkbox("Filters")
+    options = st.selectbox("\nChoose an option: ", ("", "Edge Detection", "Filters"))
 
-    if(edge_check):
+    if(options == "Edge Detection"):
         file_uploaded = st.file_uploader("Upload your file PLEASE")
         filters = []
 
@@ -50,7 +37,7 @@ elif(upload_image):
             final_image = Source.main(data, resized_img, filters, 0)
             st.image(final_image)
 
-    elif(filters_check):
+    elif(options == "Filters"):
         st.write("\nChoose which filters you want")
         glasses_label = st.checkbox("Glasses")
         hat_label = st.checkbox("Hat")

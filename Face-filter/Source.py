@@ -16,8 +16,6 @@ def add_filter(image, filters,facial_coords, index, is_add_filter):
 
 def main(data, image_file, filters_arr, choice):
 
-    print(filters_arr)
-
     #Calls Image Ctor
     img = Image(data)
 
