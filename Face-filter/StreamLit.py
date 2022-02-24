@@ -42,9 +42,9 @@ elif(upload_image):
 
     if(glasses_label):
         filters[0] = True
-    if (hat_label):
-        filters[1] = True
     if (lips_label):
+        filters[1] = True
+    if (hat_label):
         filters[2] = True
 
     file_uploaded = st.file_uploader("Upload your file PLEASE")
