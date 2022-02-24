@@ -66,4 +66,5 @@ def filterCreator(img):
     filters.append(Glasses(Im.open("Filters/glasses.png").convert("RGBA"), img, "glasses"))
     filters.append(Lips(Im.open("Filters/lips.png").convert("RGBA"), img,"lips"))
     filters.append(Hat(Im.open("Filters/witch-hat.png").convert("RGBA"), img, "witch_hat"))
+
     return filters

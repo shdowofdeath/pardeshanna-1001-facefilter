@@ -30,7 +30,23 @@ if(picture):
         butt = st.button("Detect Face")
         if (butt):
             st.image(final_image)
+
 elif(upload_image):
+
+    st.write("\nChoose which filters you want")
+    glasses_label = st.checkbox("Glasses")
+    hat_label = st.checkbox("Hat")
+    lips_label = st.checkbox("lips")
+
+    filters = [False]*3 #filters list. 0-glasses, 1-hat, 2-lips
+
+    if(glasses_label):
+        filters[0] = True
+    if (hat_label):
+        filters[1] = True
+    if (lips_label):
+        filters[2] = True
+
     file_uploaded = st.file_uploader("Upload your file PLEASE")
 
     if (file_uploaded is not None):
@@ -41,7 +57,7 @@ elif(upload_image):
         image_file = Im.open(file_uploaded)
         resized_img = image_file.resize((400, 400))
         data = asarray(resized_img)
-        final_image = Source.main(data, resized_img)
+        final_image = Source.main(data, resized_img, filters)
         # butt = st.button("Detect Face")
         # if (butt):
         st.image(final_image)

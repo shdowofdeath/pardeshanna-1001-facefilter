@@ -17,14 +17,13 @@ class ClassifierCascade:
         self.mini_grid = [[]]
 
     def detect_face(self, image):
-        counter = 0
         is_face = False
         faces_list = []
-        avrg_coords = [0, 0]
         start_coords = [0, 0]
+
         for col in range(const_nums.COLS - const_nums.MINI_GRID_SIZE):
             for row in range(const_nums.ROWS - const_nums.MINI_GRID_SIZE):
-                self.mini_grid = image.arr[row:row+const_nums.MINI_GRID_SIZE, col:col+const_nums.MINI_GRID_SIZE]
+                self.mini_grid = image.arr[row:row+const_nums.MINI_GRID_SIZE, col:col+const_nums.MINI_GRID_SIZE]#gets the mini grid
                 image.draw_mini_grid((row, col), (row + const_nums.MINI_GRID_SIZE, col + const_nums.MINI_GRID_SIZE))
                 start_coords[0] = row
                 start_coords[1] = col
@@ -32,14 +31,14 @@ class ClassifierCascade:
                     #face found
                     faces_list.append([row, col])
                     is_face = True
-                else:
-                    counter += 1
-        if is_face:
-            avrg_coords = self.calc_average_coords(faces_list)
+
+        if is_face:#face found
+            avrg_coords = self.calc_average_coords(faces_list)#gets the average coords of the face
 
         return is_face, avrg_coords
 
     def calc_average_coords(self, faces_list):
+        #returns the average coordinates of the faces found
         sum_x = 0
         sum_y = 0
 
@@ -50,11 +49,10 @@ class ClassifierCascade:
         return [int(sum_x / len(faces_list)), int(sum_y / len(faces_list))]#returns the average coords
 
     def run_stages(self, image, start_coords):
-
         for stage in self.stages[0:3]:#goes through the stages
             if not stage.run_features(self.mini_grid, image, start_coords):#runs the features in each stage
-                return False
+                return False#no face found
 
-        return True
+        return True#face found
 
 

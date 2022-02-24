@@ -161,8 +161,8 @@ def create_filter_coords(left, right, bottom, avrg_coords):
     facial_coords = []
     facial_coords.append((left[1] + avrg_coords[1], left[0] + avrg_coords[0]))#Left eye
     facial_coords.append((right[1] + avrg_coords[1] + const_nums.MINI_FACE_LEN, right[0] + avrg_coords[0]))#Right eye
-    facial_coords.append((bottom[1] + avrg_coords[1], bottom[0] + avrg_coords[0] + const_nums.MINI_FACE_LEN))#Mouth
     facial_coords.append(((facial_coords[0][0] + facial_coords[1][0]) // 2, (facial_coords[0][1] + facial_coords[1][1]) // 2))#Middle of eyes
+    facial_coords.append((bottom[1] + avrg_coords[1], bottom[0] + avrg_coords[0] + const_nums.MINI_FACE_LEN))#Mouth
     facial_coords.append((avrg_coords[1] + 100, avrg_coords[0]))#Head
 
     return facial_coords
