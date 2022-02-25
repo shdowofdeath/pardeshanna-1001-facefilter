@@ -41,12 +41,12 @@ class Glasses(Filter):
 class Lips(Filter):
     def __init__(self, filterImage, img, name):
         Filter.__init__(self, filterImage, img, name)
-        self.filterImage = self.filterImage.resize((110, 60))
+        self.filterImage = self.filterImage.resize((110, 90))
 
     def fixate(self):
         # fixes the position of the filter image
-        self.coords[0] -= 20#
-        self.coords[1] -= 20#10
+        self.coords[0] -= 35#x coord
+        self.coords[1] -= 40#y coord
 
 class Hat(Filter):
     def __init__(self, filterImage, img, name):
@@ -54,8 +54,8 @@ class Hat(Filter):
 
     def fixate(self):
         # fixes the position of the filter image
-        self.coords[0] -= 70#
-        self.coords[1] -= 130#10
+        self.coords[0] -= 50#x coord
+        self.coords[1] -= 130#y coord
         self.filterImage = self.filterImage.resize((100, 100))
 
 def filterCreator(img):
@@ -64,7 +64,7 @@ def filterCreator(img):
     '''
     filters = []
     filters.append(Glasses(Im.open("Filters/glasses.png").convert("RGBA"), img, "glasses"))
-    filters.append(Lips(Im.open("Filters/lips.png").convert("RGBA"), img,"lips"))
+    filters.append(Lips(Im.open("Filters/lips_2.png").convert("RGBA"), img,"lips"))
     filters.append(Hat(Im.open("Filters/witch-hat.png").convert("RGBA"), img, "witch_hat"))
 
     return filters
