@@ -1,7 +1,6 @@
 import cv2
 from numpy import asarray
 import numpy as np
-from Classes import Point
 from Constants import const_nums
 
 # MINI_ROWS = 240

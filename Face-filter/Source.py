@@ -39,12 +39,12 @@ def run(data, image_file, filters_arr, choice):
 
     if(is_face):#if face was found
 
-        if(choice == 0):
+        if(choice == 0):#edge detection
             averages_grid = find_eye_coords(avrg_coords, pixels, 0)
             final_img = print_img_aut(image, averages_grid, avrg_coords)
             return final_img
 
-        elif(choice == 1):
+        elif(choice == 1):#filters
             facial_coords = find_eye_coords(avrg_coords, pixels, 1)
 
             filters = filterCreator(image_file)
