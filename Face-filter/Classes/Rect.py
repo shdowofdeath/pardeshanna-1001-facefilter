@@ -21,4 +21,4 @@ class Rect:
         y = mini_grid[int(self.x) - 1][int(self.y) + int(self.height) - 1] if (int(self.x) > 0) else 0
         z = mini_grid[int(self.x) + int(self.width) - 1][int(self.y) + int(self.height) - 1]
         value = ( z - x - y + w) / (self.width * self.height)#returns the average sum of the rectangle
-        return value
+        return value 
