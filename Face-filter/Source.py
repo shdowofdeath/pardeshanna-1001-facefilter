@@ -14,7 +14,7 @@ def add_filter(image, filters,facial_coords, index, is_add_filter):
     return filters[index].image_after_filter
 
 
-def main(data, image_file, filters_arr, choice):
+def run(data, image_file, filters_arr, choice):
 
     #Calls Image Ctor
     img = Image(data)
@@ -57,6 +57,3 @@ def main(data, image_file, filters_arr, choice):
 
     else:
         print("Face was not found")
-
-if __name__ == '__main__':
-    main()
