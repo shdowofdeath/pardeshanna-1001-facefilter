@@ -16,10 +16,10 @@ class Image:
     def __init__(self, data):
         self.data = data
         self.cache = 0
-        self.whole_img = copy.deepcopy(self.data)
+        #self.whole_img = copy.deepcopy(self.data)
         #resize original image to be 400X400
-        dim = (400, 400)
-        self.whole_img = cv2.resize(self.data, dim, interpolation=cv2.INTER_AREA)
+        #dim = (400, 400)
+        #self.whole_img = cv2.resize(self.data, dim, interpolation=cv2.INTER_AREA)
         self.size = self.data.shape
         self.arr = [[]]
 
