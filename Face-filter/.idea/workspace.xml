@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/EdgeDetection.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/EdgeDetection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Point.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classes/Rect.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Rect.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants/const_libraries.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Constants/const_nums.py" beforeDir="false" afterPath="$PROJECT_DIR$/Constants/const_nums.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/WhatsApp Image 2022-02-19 at 21.48.41.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/WhatsApp Image 2022-02-19 at 21.49.11.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/bad_test.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/bad_test2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/black.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/black_on_white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/test_43.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FaceExamples/white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Filters/lips.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Filters/summer_glasses.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Filters/sun-glasses.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StreamLit.py" beforeDir="false" afterPath="$PROJECT_DIR$/StreamLit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/open_cv_face_detection/detectionFromOpenCV.py" beforeDir="false" />
-    </list>
+    <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
