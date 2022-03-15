@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="" />
+    <list default="true" id="8a232cf0-97d7-4169-a215-28336858f2bb" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classes/Filter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classes/Filter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source.py" beforeDir="false" afterPath="$PROJECT_DIR$/Source.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +79,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Filters" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../project/pardeshanna-1001-facefilter/Face-filter" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -84,10 +88,11 @@
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\FaceExamples" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\משתמש\Documents\Proj\pardeshanna-1001-facefilter\Face-filter\Classes" />
+      <recent name="C:\Users\משתמש\Documents\Proj\pardeshanna-1001-facefilter\Face-filter\EdgeDet" />
       <recent name="C:\Users\משתמש\Documents\Proj\pardeshanna-1001-facefilter\Face-filter" />
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\FaceExamples" />
       <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\test_50" />
-      <recent name="C:\Users\משתמש\Documents\Project\pardeshanna-1001-facefilter\Face-filter\Parser" />
     </key>
   </component>
   <component name="RunManager" selected="Python.StreamLit">

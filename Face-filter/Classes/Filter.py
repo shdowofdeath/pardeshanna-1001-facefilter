@@ -1,11 +1,6 @@
-import copy
 from Classes.Image import *
-from Classes.EdgeDetection import *
-from Classes.ClassifierCascade import *
-from Parser.parser import load_stages
-from Constants import const_nums
-import time
-from PIL import Image as Im, ImageDraw, ImageFilter
+from PIL import Image as Im
+
 
 class Filter:
     def __init__(self, filterImage, img, name):

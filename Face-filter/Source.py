@@ -1,4 +1,5 @@
 from Classes.Filter import *
+from Classes.EdgeDetection import *
 
 def add_filter(image, filters,facial_coords, index, is_add_filter):
     filters[index].img = image
